@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "author" : "Apple Vision Pro",
+    "description" : "Apple ",
+    "tags" : "Apple Park ",
+    "title" : "Apple ",
+    "tool" : "Gesture Composer by nthState"
+  },
+  "poses" : [
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "942C7668-37FE-436D-B8B3-8A143797B600",
+          "source" : "left.indexFingerTip",
+          "target" : "right.indexFingerTip",
+          "value" : 0.02
+        }
+      ]
+    }
+  ],
+  "version" : "1"
+}

@@ -1,0 +1,70 @@
+{
+  "metadata" : {
+    "author" : "Apple Vision Pro",
+    "description" : "",
+    "tags" : "",
+    "title" : "All fingers then thumb",
+    "tool" : "Gesture Composer by nthState"
+  },
+  "poses" : [
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "2385F5D4-A316-4014-A609-89328024AEE5",
+          "source" : "left.indexFingerTip",
+          "target" : "right.indexFingerTip",
+          "value" : 0.02
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "AD9FEFCB-D33A-4FBD-B047-BAF95D469F1E",
+          "source" : "right.thumbTip",
+          "target" : "left.thumbTip",
+          "value" : 0.02
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "57C606BF-2B93-4C2B-AE95-00ABA89AB8EA",
+          "source" : "left.littleFingerTip",
+          "target" : "right.littleFingerTip",
+          "value" : 0.02
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "D29C7B51-DE9A-4E03-99A0-4642A8103667",
+          "source" : "left.middleFingerTip",
+          "target" : "right.middleFingerTip",
+          "value" : 0.02
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "44F33732-B09D-4F8C-B4AE-16DEB0BD53CD",
+          "source" : "left.ringFingerTip",
+          "target" : "right.ringFingerTip",
+          "value" : 0.02
+        }
+      ]
+    },
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "C7C431B2-F190-4552-B435-C4A7335BB955",
+          "source" : "left.thumbTip",
+          "target" : "right.thumbTip",
+          "value" : 0.02
+        }
+      ]
+    }
+  ],
+  "version" : "1"
+}

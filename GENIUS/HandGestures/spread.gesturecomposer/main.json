@@ -1,0 +1,70 @@
+{
+  "metadata" : {
+    "author" : "Apple Vision Pro",
+    "description" : "",
+    "tags" : "",
+    "title" : "Spread",
+    "tool" : "Gesture Composer by nthState"
+  },
+  "poses" : [
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "44EE1ABC-1AB8-4D65-82DD-418C864A32C4",
+          "source" : "right.indexFingerTip",
+          "target" : "right.middleFingerTip",
+          "value" : 0.02
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "7D5658D9-A402-41D8-81B5-4E0D9CD7232B",
+          "source" : "right.middleFingerTip",
+          "target" : "right.ringFingerTip",
+          "value" : 0.02
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "Index Finger tips close",
+          "id" : "62123557-039E-4E6F-BE75-4F085B2000AE",
+          "source" : "right.ringFingerTip",
+          "target" : "right.littleFingerTip",
+          "value" : 0.02
+        }
+      ]
+    },
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_greater_than",
+          "description" : "Index Finger tips close",
+          "id" : "50173ADA-5335-4B2D-93E3-034412EF3171",
+          "source" : "right.indexFingerTip",
+          "target" : "right.middleFingerTip",
+          "value" : 0.04
+        },
+        {
+          "action" : "distance_greater_than",
+          "description" : "Index Finger tips close",
+          "id" : "C6E0C8C9-2540-44E0-833A-06568CFD553E",
+          "source" : "right.middleFingerTip",
+          "target" : "right.ringFingerTip",
+          "value" : 0.04
+        },
+        {
+          "action" : "distance_greater_than",
+          "description" : "Index Finger tips close",
+          "id" : "227A6BAC-494E-4F14-9C9C-A58366C53DF0",
+          "source" : "right.ringFingerTip",
+          "target" : "right.littleFingerTip",
+          "value" : 0.04
+        }
+      ]
+    }
+  ],
+  "version" : "1"
+}
