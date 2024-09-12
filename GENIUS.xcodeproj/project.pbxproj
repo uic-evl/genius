@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F5F907E2C208D780064AFE1 /* spread.gesturecomposer in Resources */ = {isa = PBXBuildFile; fileRef = 2F5F907D2C208D780064AFE1 /* spread.gesturecomposer */; };
-		2F5F90802C2340AC0064AFE1 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5F907F2C2340AC0064AFE1 /* login.swift */; };
 		2F5F90822C2370A80064AFE1 /* SimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5F90812C2370A80064AFE1 /* SimView.swift */; };
 		2F714BC52C175B8300F309F1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2F714BC42C175B8300F309F1 /* index.html */; };
 		2F714BC62C18B31700F309F1 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD48ED62C10F3BB002DBC5D /* ModelView.swift */; };
@@ -39,6 +38,7 @@
 		AC81CAD12BED259800933492 /* GENIUSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81CAD02BED259800933492 /* GENIUSTests.swift */; };
 		AC953E962C482813002D8190 /* RealityKitContent in Resources */ = {isa = PBXBuildFile; fileRef = AC81CAB92BED259700933492 /* RealityKitContent */; };
 		AC953E982C4EB29D002D8190 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC953E972C4EB29D002D8190 /* CalendarView.swift */; };
+		AC974F712C9376F60022EC30 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC974F702C9376F60022EC30 /* login.swift */; };
 		ACDC9BD22BF7F39F008C5B21 /* RecorderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC9BD12BF7F39F008C5B21 /* RecorderModel.swift */; };
 		ACDC9C662BFD15A4008C5B21 /* hands-together.gesturecomposer in Resources */ = {isa = PBXBuildFile; fileRef = ACDC9C642BFD15A4008C5B21 /* hands-together.gesturecomposer */; };
 		ACDC9C682BFD1D84008C5B21 /* spiderman.gesturecomposer in Resources */ = {isa = PBXBuildFile; fileRef = ACDC9C672BFD1D84008C5B21 /* spiderman.gesturecomposer */; };
@@ -60,7 +60,6 @@
 
 /* Begin PBXFileReference section */
 		2F5F907D2C208D780064AFE1 /* spread.gesturecomposer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spread.gesturecomposer; sourceTree = "<group>"; };
-		2F5F907F2C2340AC0064AFE1 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		2F5F90812C2370A80064AFE1 /* SimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimView.swift; sourceTree = "<group>"; };
 		2F714BC42C175B8300F309F1 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		2FA6E82F2C1B8288004C7088 /* halo_hud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halo_hud.png; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		AC81CAD02BED259800933492 /* GENIUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GENIUSTests.swift; sourceTree = "<group>"; };
 		AC953E912C48253C002D8190 /* SpiderMan.usda */ = {isa = PBXFileReference; lastKnownFileType = text; name = SpiderMan.usda; path = Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/SpiderMan.usda; sourceTree = "<group>"; };
 		AC953E972C4EB29D002D8190 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AC974F702C9376F60022EC30 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		ACDC9BD12BF7F39F008C5B21 /* RecorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderModel.swift; sourceTree = "<group>"; };
 		ACDC9C642BFD15A4008C5B21 /* hands-together.gesturecomposer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "hands-together.gesturecomposer"; sourceTree = "<group>"; };
 		ACDC9C672BFD1D84008C5B21 /* spiderman.gesturecomposer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spiderman.gesturecomposer; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 				AC81CAC22BED259800933492 /* Assets.xcassets */,
 				AC81CAC72BED259800933492 /* Info.plist */,
 				AC81CAC42BED259800933492 /* Preview Content */,
-				2F5F907F2C2340AC0064AFE1 /* login.swift */,
+				AC974F702C9376F60022EC30 /* login.swift */,
 			);
 			path = GENIUS;
 			sourceTree = "<group>";
@@ -380,8 +380,8 @@
 				AC81CABF2BED259700933492 /* ContentView.swift in Sources */,
 				AC81CABD2BED259700933492 /* GENIUSApp.swift in Sources */,
 				ACDC9C782BFE72A9008C5B21 /* MeetingManager.swift in Sources */,
-				2F5F90802C2340AC0064AFE1 /* login.swift in Sources */,
 				4516FB502C19ED6200D0F913 /* GraphManager.swift in Sources */,
+				AC974F712C9376F60022EC30 /* login.swift in Sources */,
 				ACDC9C6C2BFD2206008C5B21 /* ConversationManager.swift in Sources */,
 				2F5F90822C2370A80064AFE1 /* SimView.swift in Sources */,
 				2FD48ECF2C0E3E06002DBC5D /* AnimationManager.swift in Sources */,
