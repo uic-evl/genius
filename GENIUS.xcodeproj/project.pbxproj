@@ -46,6 +46,7 @@
 		ACDC9C6C2BFD2206008C5B21 /* ConversationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC9C6B2BFD2206008C5B21 /* ConversationManager.swift */; };
 		ACDC9C732BFE51FE008C5B21 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC9C722BFE51FE008C5B21 /* HelpView.swift */; };
 		ACDC9C782BFE72A9008C5B21 /* MeetingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC9C772BFE72A9008C5B21 /* MeetingManager.swift */; };
+		EE39F8022C98C0C90032E955 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39F8012C98C0C50032E955 /* login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		ACDC9C6B2BFD2206008C5B21 /* ConversationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationManager.swift; sourceTree = "<group>"; };
 		ACDC9C722BFE51FE008C5B21 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		ACDC9C772BFE72A9008C5B21 /* MeetingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingManager.swift; sourceTree = "<group>"; };
+		EE39F8012C98C0C50032E955 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
