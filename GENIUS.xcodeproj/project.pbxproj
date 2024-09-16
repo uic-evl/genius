@@ -180,7 +180,6 @@
 			children = (
 				AC953E912C48253C002D8190 /* SpiderMan.usda */,
 				AC81CAB72BED259700933492 /* GENIUS */,
-				EE39F8012C98C0C50032E955 /* login.swift */,
 				AC81CAB82BED259700933492 /* Packages */,
 				AC81CACF2BED259800933492 /* GENIUSTests */,
 				AC81CAB62BED259700933492 /* Products */,
@@ -209,6 +208,7 @@
 				AC81CAC22BED259800933492 /* Assets.xcassets */,
 				AC81CAC72BED259800933492 /* Info.plist */,
 				AC81CAC42BED259800933492 /* Preview Content */,
+				EE39F8012C98C0C50032E955 /* login.swift */,
 			);
 			path = GENIUS;
 			sourceTree = "<group>";
