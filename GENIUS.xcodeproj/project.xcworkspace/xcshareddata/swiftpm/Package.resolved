@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "gesturekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nthstate/GestureKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7975ea3337583da2039e8388b3070a366daa78b4"
+      }
+    },
+    {
+      "identity" : "grape",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/li3zhen1/Grape",
+      "state" : {
+        "revision" : "d8d73ea092bc046e590643793e908fe13dd4113e",
+        "version" : "0.7.6"
+      }
+    },
+    {
+      "identity" : "umainspatialgestures",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Umain-Vision-Pro/UmainSpatialGestures",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8366f1e2b223d2b07695c334d0050434dc6b231f"
+      }
+    },
+    {
+      "identity" : "uuidv7",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nthState/UUIDV7",
+      "state" : {
+        "branch" : "main",
+        "revision" : "68c460a23918f82b590cf4b20d06e92e019b39fc"
+      }
+    }
+  ],
+  "version" : 2
+}

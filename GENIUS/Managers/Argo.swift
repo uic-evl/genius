@@ -75,6 +75,28 @@ class Argo : ObservableObject {
                 ]
             ]
         }
+        else if (model == "Llama3.1 7B") {
+            print("using model llama")
+            // URL for EVL Llama3.1 7B
+            let url = URL(string: "https://arcade.evl.uic.edu/llama31_8bf/v1/chat/completions")!
+
+            // Create the URL request
+            request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "accept")
+
+            // Create the parameters for the request
+            parameters = [
+                "model": "meta/llama-3.1-8b-instruct",
+                "messages": [
+                    ["role": "assistant", "content": "You are a helpful assistant, providing concise answers to the user. Do not hallucinate. Do not make up factual information."],
+                    ["role": "user", "content": fullPrompt]
+                ],
+                "stream": false,
+                "max_tokens": 2000
+            ]
+        }
         else {
             return "Error: Model not found."
         }
@@ -95,20 +117,29 @@ class Argo : ObservableObject {
         }
         
         // Extract response string from JSON response
-        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-        
-        if let responseString = jsonResponse?["response"] as? String {
-            return responseString
-        }
-        else if let responseString = jsonResponse?["generated_text"] as? String {
-            return responseString.trimmingCharacters(in: .whitespacesAndNewlines)
-//            let startIndex = responseString.index(responseString.startIndex, offsetBy: 2)
-//            return String(responseString[startIndex...])
+        if let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+            if let responseString = jsonResponse["response"] as? String {
+                    return responseString
+            }
+            else if let responseString = jsonResponse["generated_text"] as? String {
+                return responseString.trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+            else if let choicesArray = jsonResponse["choices"] as? [[String: Any]],
+                    let firstChoice = choicesArray.first,  // Get the first element in the array
+                    let message = firstChoice["message"] as? [String: Any],  // Access the "message" dictionary
+                    let content = message["content"] as? String {  // Get the "content" string
+                return content
+            }
+            else {
+                print("Response does not contain 'response' or 'generated_text' or 'choices' field or it's not a string")
+                return "Error"
+            }
         }
         else {
-            print("Response does not contain 'response' or 'generated_text' field or it's not a string")
+            print("invalid json response")
             return "Error"
         }
+        
     }
     
     // Extract mode needed based on user's recognized text
