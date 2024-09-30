@@ -12,7 +12,7 @@ import Combine
 class Argo : ObservableObject {
     private var question: Bool = false // boolean for whether GENIUS has just asked a question
     private var lastFunction: String = "" // keeps track of last function called in case a question has been asked
-    
+    private var curModel: String = "Llama"
     // Simulation variables
     private var paramConfirm: Bool = false // boolean for whether the user has confirmed the parameters proposed
     private var simParams: String = "" // holds parameters proposed
@@ -59,7 +59,6 @@ class Argo : ObservableObject {
             ]
         }
         else if (model == "Llama") {
-            // Access Argo API
             let url = URL(string: "https://arcade.evl.uic.edu/llama/generate")!
             
             // Form HTTP request
@@ -149,10 +148,10 @@ class Argo : ObservableObject {
             speaker.speak(text: "Sorry I didn't get that")
             return
         }
-        print("recording in Argo", recording)
+        print("recording ", recording)
         let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
         Task {
-            let mode = try await getResponse(prompt: prompt, model: "Argo")
+            let mode = try await getResponse(prompt: prompt, model: curModel)
             print("Mode:", mode, "done")
             if mode.contains("meeting") {
                 self.handleMeeting()
@@ -184,8 +183,8 @@ class Argo : ObservableObject {
         if let range = updatingTextHolder.recongnizedText.range(of: "record meeting ") {
             do{
                 Task {
-                    let meeting =  try await getResponse(prompt: "Added proper punctuation and fix any spelling or grammar errors you find: " + String(updatingTextHolder.recongnizedText[(range.upperBound...)]), model: "Argo")
-                    let meetingName = try await getResponse(prompt: "Come up with a short name to describe this meeting: " + meeting, model: "Argo")
+                    let meeting =  try await getResponse(prompt: "Added proper punctuation and fix any spelling or grammar errors you find: " + String(updatingTextHolder.recongnizedText[(range.upperBound...)]), model: curModel)
+                    let meetingName = try await getResponse(prompt: "Come up with a short name to describe this meeting: " + meeting, model: curModel)
                     let newMeeting = MeetingManager(meetingText: meeting, meetingName: meetingName)
                     newMeeting.summarizeMeeting()
                     updatingTextHolder.meetingManagers.append(newMeeting)
@@ -196,17 +195,17 @@ class Argo : ObservableObject {
         }
     }
     
-    // Sends prompt straight to Argo
+    // Sends prompt straight to LLM
     func handlePrompt() {
         updatingTextHolder.mode = "Loading response..."
         let question = updatingTextHolder.recongnizedText
         do {
             Task {
-                // call Argo API to get response to prompt
-                let response = try await getResponse(prompt: question, model: "Argo")
+                // call LLM API to get response to prompt
+                let response = try await getResponse(prompt: question, model: curModel)
                 print("response:", response, "response done")
                 
-                // call text to speech function with the response from Argo
+                // call text to speech function with the response from LLM
                 speaker.speak(text: response)
                 
                 // add converation entry
@@ -240,7 +239,7 @@ class Argo : ObservableObject {
                     updatingTextHolder.responseText = "Sorry, I couldn't find a model for that."
                     return
                 }
-                modelSearch = try await getResponse(prompt: prompt, model: "Argo")
+                modelSearch = try await getResponse(prompt: prompt, model: curModel)
 
                 print("Searching for: \(modelSearch)")
 
@@ -269,7 +268,7 @@ class Argo : ObservableObject {
                     print("No valid UID generated")
                     return
                 }
-                modelToOpen = try await getResponse(prompt: prompt, model: "Argo")
+                modelToOpen = try await getResponse(prompt: prompt, model: curModel)
                 print("model to open:", modelToOpen)
                 attempts += 1
             }
@@ -357,7 +356,7 @@ class Argo : ObservableObject {
                     // Ask user if these paramters are acceptable
                     let confirmPrompt = "I want to run a fluid dynamics simulation. You have just provided these parameters (\(simParams)) for a fluid dynamics simulation in this order: density, speed, length, viscosity, time, frequency. Respond to this in less than 3 sentences telling me the parameters you generated and asking if I want to confirm these parameters. Only if any parameter was adjusted tell me which parameter and what you changed. Speak in a conversational manner and be helpful. Make sure your response is using some different words from the previous context to not be repetitive."
                     
-                    let confirmTTS = try await getResponse(prompt: confirmPrompt, model: "Argo")
+                    let confirmTTS = try await getResponse(prompt: confirmPrompt, model: curModel)
                     speaker.speak(text: confirmTTS)
                     
                     conversationManager.addEntry(prompt: updatingTextHolder.recongnizedText, response: paramString)
