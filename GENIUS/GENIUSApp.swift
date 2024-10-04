@@ -31,10 +31,10 @@ struct GENIUSApp: App {
                         Label("Home", systemImage: "house")
                     }
                 
-                HelpView()
-                    .tabItem {
-                        Label("Info", systemImage: "info.circle")
-                    }
+//                HelpView()
+//                    .tabItem {
+//                        Label("Info", systemImage: "info.circle")
+//                    }
                 ConvoView()
                     .tabItem {
                         Label("Conversation", systemImage: "message")
@@ -43,17 +43,17 @@ struct GENIUSApp: App {
                     .tabItem {
                         Label("Meetings", systemImage: "person.3")
                     }
-                ProteinView()
-                    .tabItem {
-                        Label("Protein", systemImage: "atom")
-                    }
-                PolarisView()
-                    .tabItem {
-                        Label("Polaris", systemImage: "apple.terminal")
-                    }
+//                ProteinView()
+//                    .tabItem {
+//                        Label("Protein", systemImage: "atom")
+//                    }
+//                PolarisView()
+//                    .tabItem {
+//                        Label("Polaris", systemImage: "apple.terminal")
+//                    }
                 CalendarView()
                     .tabItem {
-                        Label("Cakendar", systemImage: "tv.circle")
+                        Label("Calendar", systemImage: "tv.circle")
                     }
             }
         }
