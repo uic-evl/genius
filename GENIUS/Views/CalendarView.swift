@@ -8,24 +8,36 @@ import SwiftUI
 
 class EventManager: ObservableObject {
     @Published var events: [Date: [String]] = [:]
-    
-    // Adds an event to a specific date
-    func addEvent(on date: Date, event: String) {
-        let key = Calendar.current.startOfDay(for: date)
-        if events[key] != nil {
-            events[key]?.append(event)
-        } else {
-            events[key] = [event]
+    @ObservedObject var updatingTextHolder = UpdatingTextHolder.shared
+
+    func updateEvents() {
+        let calendar = Calendar.current
+        for manager in updatingTextHolder.calendarManager {
+            if let date = getDateFromDay(manager.getDay()) {
+                let event = "\(manager.getName()) at \(manager.getTime())"
+                let key = calendar.startOfDay(for: date)
+                if events[key] != nil {
+                    events[key]?.append(event)
+                } else {
+                    events[key] = [event]
+                }
+            }
         }
     }
     
+    // Converts the day string to Date
+    private func getDateFromDay(_ day: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        return formatter.date(from: day)
+    }
+
     // Retrieves events for a specific date
     func events(for date: Date) -> [String] {
         let key = Calendar.current.startOfDay(for: date)
         return events[key] ?? []
     }
 }
-
 
 struct CalendarView: View {
     @StateObject private var eventManager = EventManager()
@@ -69,10 +81,7 @@ struct CalendarView: View {
         }
         .padding()
         .onAppear {
-            let calendar = Calendar.current
-            eventManager.addEvent(on: calendar.date(byAdding: .day, value: -1, to: Date())!, event: "Meeting at 10 AM")
-            eventManager.addEvent(on: calendar.date(byAdding: .day, value: 0, to: Date())!, event: "Lunch with Sarah at 1 PM")
-            eventManager.addEvent(on: calendar.date(byAdding: .day, value: 1, to: Date())!, event: "Conference call at 3 PM")
+            eventManager.updateEvents()
         }
     }
     

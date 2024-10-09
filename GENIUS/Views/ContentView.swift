@@ -89,6 +89,10 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack(spacing: 30) {
+                        Button("Add Event") {
+                            addEventToToday()
+                        }
+                        .buttonStyle(.borderedProminent)
 //                        Button("test new llama") {
 //                            do {
 //                                Task {
@@ -146,6 +150,22 @@ struct ContentView: View {
             }
         }
     }
+    
+    
+    
+    private func addEventToToday() {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            guard let eventDate = dateFormatter.date(from: "10/09/2024") else {
+                print("Invalid date format")
+                return
+            }
+            
+            let calendarManager = CalendarManager(meetingName: "test", time: "5PM", day: "\(eventDate)")
+            
+            updatingTextHolder.calendarManager.append(calendarManager)
+            print("Added event: test for 10/09/2024 at 5PM")
+        }
 
 }
 
@@ -188,7 +208,9 @@ final class UpdatingTextHolder: ObservableObject {
     @Published var recongnizedText: String = ""
     @Published var isRecording: Bool = false
     @Published var mode: String = " "
+    @Published var schedule: String = " "
     @Published var meetingManagers: [MeetingManager] = []
+    @Published var calendarManager: [CalendarManager] = []
     
     private init() {}
 }
