@@ -149,7 +149,7 @@ class Argo : ObservableObject {
             return
         }
         print("recording ", recording)
-        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
+        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
         Task {
             let mode = try await getResponse(prompt: prompt, model: curModel)
             print("Mode:", mode, "done")
@@ -170,6 +170,9 @@ class Argo : ObservableObject {
             }
             else if mode.contains("clear") {
                 self.handleClear()
+            }
+            else if mode.contains("schedule") {
+                self.handleSchedule()
             }
             else {
                 speaker.speak(text: "No response possible")
@@ -395,6 +398,40 @@ class Argo : ObservableObject {
                     graph.createModel()
                 }
                 self.updatingTextHolder.mode = " "
+            }
+        }
+    }
+    
+    func handleSchedule() {
+        updatingTextHolder.mode = "Loading response..."
+        let question = updatingTextHolder.recongnizedText
+        do {
+            Task {
+                // call LLM API to get response to prompt
+                let date_request = "Extract just the date this request is talking about in MM/DD/YYYY formate: " + question
+                let date = try await getResponse(prompt: date_request, model: curModel)
+                print("response:", date, "response done")
+                
+                let time_request = "Extract just the time this request is talking about in 00:00 formate: " + question
+                let time = try await getResponse(prompt: time_request, model: curModel)
+                print("response:", time, "response done")
+                
+                let info_request = "Create a short name for this meeting : " + question
+                let name = try await getResponse(prompt: info_request, model: curModel)
+                print("response:", info_request, "response done")
+                
+                // call text to speech function with the response from LLM
+                
+                let calendarManager = CalendarManager(meetingName: name, time: time, day: date)
+                
+                DispatchQueue.main.async {
+                    self.updatingTextHolder.calendarManager.append(calendarManager)
+                    print("Added event: test for 10/09/2024 at 5PM")
+                }
+                print(updatingTextHolder.calendarManager)
+                speaker.speak(text: "Scheduled meeting on " + date)
+                
+                updatingTextHolder.responseText = "Scheduled meeting on " + date
             }
         }
     }
