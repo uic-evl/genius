@@ -149,7 +149,7 @@ class Argo : ObservableObject {
             return
         }
         print("recording ", recording)
-        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
+        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
         Task {
             let mode = try await getResponse(prompt: prompt, model: curModel)
             print("Mode:", mode, "done")
@@ -171,9 +171,13 @@ class Argo : ObservableObject {
             else if mode.contains("clear") {
                 self.handleClear()
             }
+            else if mode.contains("check_schedule") {
+                self.handleCheckSchedule()
+            }
             else if mode.contains("schedule") {
                 self.handleSchedule()
             }
+            
             else {
                 speaker.speak(text: "No response possible")
             }
@@ -408,7 +412,12 @@ class Argo : ObservableObject {
         do {
             Task {
                 // call LLM API to get response to prompt
-                let date_request = "Extract just the date this request is talking about in MM/DD/YYYY formate: " + question
+                let current_date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy"
+                let formattedDate = dateFormatter.string(from: current_date)
+
+                let date_request = "Extract just the date this request is talking about in MM/DD/YYYY formate. Use the current date, which is " + formattedDate + " if it's needed: " + question
                 let date = try await getResponse(prompt: date_request, model: curModel)
                 print("response:", date, "response done")
                 
@@ -423,15 +432,47 @@ class Argo : ObservableObject {
                 // call text to speech function with the response from LLM
                 
                 let calendarManager = CalendarManager(meetingName: name, time: time, day: date)
-                
+                print(calendarManager.getName())
+                print(calendarManager.getDay())
+                print(calendarManager.getTime())
+
                 DispatchQueue.main.async {
                     self.updatingTextHolder.calendarManager.append(calendarManager)
-                    print("Added event: test for 10/09/2024 at 5PM")
+                    print(self.updatingTextHolder.calendarManager)
                 }
-                print(updatingTextHolder.calendarManager)
+                
                 speaker.speak(text: "Scheduled meeting on " + date)
                 
                 updatingTextHolder.responseText = "Scheduled meeting on " + date
+                updatingTextHolder.mode = ""
+
+            }
+        }
+    }
+    
+    
+    func handleCheckSchedule() {
+        updatingTextHolder.mode = "Loading response..."
+        let question = updatingTextHolder.recongnizedText
+        do {
+            Task {
+                var all_meetings = ""
+                for meeting in updatingTextHolder.calendarManager {
+                    all_meetings += "(\(meeting.getName()) at \(meeting.getTime()) on \(meeting.getDay())) "
+                }
+                // call LLM API to get response to prompt
+                let current_date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy"
+                let formattedDate = dateFormatter.string(from: current_date)
+
+                let request = all_meetings + " Using this list of meetings and the current date, " + formattedDate + "answer this question the best you can. Make sure to tell me the name, time and date for the meeting: " + question
+                let response = try await getResponse(prompt: request, model: curModel)
+                print("response:", response, "response done")
+                
+                updatingTextHolder.responseText = response
+                updatingTextHolder.mode = ""
+
             }
         }
     }
