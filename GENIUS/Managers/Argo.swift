@@ -12,7 +12,7 @@ import Combine
 class Argo : ObservableObject {
     private var question: Bool = false // boolean for whether GENIUS has just asked a question
     private var lastFunction: String = "" // keeps track of last function called in case a question has been asked
-    
+    private var curModel: String = "Llama"
     // Simulation variables
     private var paramConfirm: Bool = false // boolean for whether the user has confirmed the parameters proposed
     private var simParams: String = "" // holds parameters proposed
@@ -59,7 +59,6 @@ class Argo : ObservableObject {
             ]
         }
         else if (model == "Llama") {
-            // Access Argo API
             let url = URL(string: "https://arcade.evl.uic.edu/llama/generate")!
             
             // Form HTTP request
@@ -112,7 +111,6 @@ class Argo : ObservableObject {
         // Check if response is valid
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
-            print(response)
             print("Invalid Response")
             return "Invalid Response"
         }
@@ -150,10 +148,10 @@ class Argo : ObservableObject {
             speaker.speak(text: "Sorry I didn't get that")
             return
         }
-        print("recording in Argo", recording)
-        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting. Choose prompt if the user has asked a question or wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
+        print("recording ", recording)
+        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
         Task {
-            let mode = try await getResponse(prompt: prompt, model: "Llama3.1 7B", context: false)
+            let mode = try await getResponse(prompt: prompt, model: curModel)
             print("Mode:", mode, "done")
             if mode.contains("meeting") {
                 self.handleMeeting()
@@ -173,6 +171,13 @@ class Argo : ObservableObject {
             else if mode.contains("clear") {
                 self.handleClear()
             }
+            else if mode.contains("check_schedule") {
+                self.handleCheckSchedule()
+            }
+            else if mode.contains("schedule") {
+                self.handleSchedule()
+            }
+            
             else {
                 speaker.speak(text: "No response possible")
             }
@@ -185,8 +190,8 @@ class Argo : ObservableObject {
         if let range = updatingTextHolder.recongnizedText.range(of: "record meeting ") {
             do{
                 Task {
-                    let meeting =  try await getResponse(prompt: "Added proper punctuation and fix any spelling or grammar errors you find: " + String(updatingTextHolder.recongnizedText[(range.upperBound...)]), model: "Llama3.1 7B")
-                    let meetingName = try await getResponse(prompt: "Come up with a short name to describe this meeting: " + meeting, model: "Llama3.1 7B")
+                    let meeting =  try await getResponse(prompt: "Added proper punctuation and fix any spelling or grammar errors you find: " + String(updatingTextHolder.recongnizedText[(range.upperBound...)]), model: curModel)
+                    let meetingName = try await getResponse(prompt: "Come up with a short name to describe this meeting: " + meeting, model: curModel)
                     let newMeeting = MeetingManager(meetingText: meeting, meetingName: meetingName)
                     newMeeting.summarizeMeeting()
                     updatingTextHolder.meetingManagers.append(newMeeting)
@@ -197,7 +202,7 @@ class Argo : ObservableObject {
         }
     }
     
-    // Sends prompt straight to Argo
+    // Sends prompt straight to LLM
     func handlePrompt() {
         updatingTextHolder.mode = "Loading response..."
         let question = updatingTextHolder.recongnizedText
@@ -207,7 +212,7 @@ class Argo : ObservableObject {
                 let response = try await getResponse(prompt: "Provide a response as if you are speaking: " + question, model: "Llama3.1 7B")
                 print("response:", response, "response done")
                 
-                // call text to speech function with the response from Argo
+                // call text to speech function with the response from LLM
                 speaker.speak(text: response)
                 
                 // add converation entry
@@ -241,7 +246,7 @@ class Argo : ObservableObject {
                     updatingTextHolder.responseText = "Sorry, I couldn't find a model for that."
                     return
                 }
-                modelSearch = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
+                modelSearch = try await getResponse(prompt: prompt, model: curModel)
 
                 print("Searching for: \(modelSearch)")
 
@@ -271,7 +276,7 @@ class Argo : ObservableObject {
                     print("No valid UID generated")
                     return
                 }
-                modelToOpen = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
+                modelToOpen = try await getResponse(prompt: prompt, model: curModel)
                 print("model to open:", modelToOpen)
                 attempts += 1
             }
@@ -306,7 +311,7 @@ class Argo : ObservableObject {
                 // Prompt Llama to give a spoken response on the simulation
                 let prompt2 = "You just provided me with these parameters: \(parameters) for a fluid dynamics simulation in this order: density, speed, length, viscosity, time, frequency. Respond to this sentence using less than 5 sentences as if you are speaking to me as you show the simulation: \(updatingTextHolder.recongnizedText). Do not use asterisks, you are only speaking."
                 
-                let response = try await getResponse(prompt: prompt2, model: "Llama3.1 7B")
+                let response = try await getResponse(prompt: prompt2, model: "Llama")
                 
                 // Update UI and speak response
                 updatingTextHolder.responseText = response
@@ -332,7 +337,7 @@ class Argo : ObservableObject {
                     // Generate the parameters for the simulation
                     let prompt = "Respond only in a comma seperated string. The user would like to run a simulation of fluid dynamics. The parameters and their defaults are the following: density: 1000, speed: 1.0, length: 2.5, viscosity: 1.3806, time: 8.0, freq: 0.04.  Here is the user's prompt: \(updatingTextHolder.recongnizedText). Your job is to generate the parameters for the simulation given the user prompt. If the conversation context includes previously generated parameters, start with those numbers instead of the default values and adjust them as needed to fulfill the user's request. Otherwise if the user says to simply run the simulation, return the default values. Your response should be the parameters as a string of numbers seperated by commas with no spaces in the order: density, speed, length, viscosity, time, frequency. Do not use any words."
                     
-                    simParams = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
+                    simParams = try await getResponse(prompt: prompt, model: "Llama")
                     
                     // Split the input string by commas
                     let values = simParams.split(separator: ",")
@@ -359,7 +364,7 @@ class Argo : ObservableObject {
                     // Ask user if these paramters are acceptable
                     let confirmPrompt = "I want to run a fluid dynamics simulation. You have just provided these parameters (\(simParams)) for a fluid dynamics simulation in this order: density, speed, length, viscosity, time, frequency. Respond to this in less than 3 sentences telling me the parameters you generated and asking if I want to confirm these parameters. Only if any parameter was adjusted tell me which parameter and what you changed. Speak in a conversational manner and be helpful. Make sure your response is using some different words from the previous context to not be repetitive."
                     
-                    let confirmTTS = try await getResponse(prompt: confirmPrompt, model: "Llama3.1 7B")
+                    let confirmTTS = try await getResponse(prompt: confirmPrompt, model: curModel)
                     speaker.speak(text: confirmTTS)
                     
                     conversationManager.addEntry(prompt: updatingTextHolder.recongnizedText, response: paramString)
@@ -398,6 +403,79 @@ class Argo : ObservableObject {
                     graph.createModel()
                 }
                 self.updatingTextHolder.mode = " "
+            }
+        }
+    }
+    
+    func handleSchedule() {
+        updatingTextHolder.mode = "Loading response..."
+        let question = updatingTextHolder.recongnizedText
+        do {
+            Task {
+                // call LLM API to get response to prompt
+                let current_date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy"
+                let formattedDate = dateFormatter.string(from: current_date)
+
+                let date_request = "Extract just the date this request is talking about in MM/DD/YYYY formate. Use the current date, which is " + formattedDate + " if it's needed: " + question
+                let date = try await getResponse(prompt: date_request, model: curModel)
+                print("response:", date, "response done")
+                
+                let time_request = "Extract just the time this request is talking about in 00:00 formate: " + question
+                let time = try await getResponse(prompt: time_request, model: curModel)
+                print("response:", time, "response done")
+                
+                let info_request = "Create a short name for this meeting : " + question
+                let name = try await getResponse(prompt: info_request, model: curModel)
+                print("response:", info_request, "response done")
+                
+                // call text to speech function with the response from LLM
+                
+                let calendarManager = CalendarManager(meetingName: name, time: time, day: date)
+                print(calendarManager.getName())
+                print(calendarManager.getDay())
+                print(calendarManager.getTime())
+
+                DispatchQueue.main.async {
+                    self.updatingTextHolder.calendarManager.append(calendarManager)
+                    print(self.updatingTextHolder.calendarManager)
+                }
+                
+                speaker.speak(text: "Scheduled meeting on " + date)
+                
+                updatingTextHolder.responseText = "Scheduled meeting on " + date
+                updatingTextHolder.mode = ""
+
+            }
+        }
+    }
+    
+    
+    func handleCheckSchedule() {
+        updatingTextHolder.mode = "Loading response..."
+        let question = updatingTextHolder.recongnizedText
+        do {
+            Task {
+                var all_meetings = ""
+                for meeting in updatingTextHolder.calendarManager {
+                    all_meetings += "(\(meeting.getName()) at \(meeting.getTime()) on \(meeting.getDay())) "
+                }
+                // call LLM API to get response to prompt
+                let current_date = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy"
+                let formattedDate = dateFormatter.string(from: current_date)
+
+                let request = all_meetings + " Using this list of meetings and the current date, " + formattedDate + "answer this question the best you can. Make sure to tell me the name, time(convert from military) and date for the meeting: " + question
+                let response = try await getResponse(prompt: request, model: curModel)
+                print("response:", response, "response done")
+                
+                updatingTextHolder.responseText = response
+                speaker.speak(text: response)
+
+                updatingTextHolder.mode = ""
+                    
             }
         }
     }

@@ -39,6 +39,7 @@
 		AC81CAD12BED259800933492 /* GENIUSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC81CAD02BED259800933492 /* GENIUSTests.swift */; };
 		AC953E962C482813002D8190 /* RealityKitContent in Resources */ = {isa = PBXBuildFile; fileRef = AC81CAB92BED259700933492 /* RealityKitContent */; };
 		AC953E982C4EB29D002D8190 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC953E972C4EB29D002D8190 /* CalendarView.swift */; };
+		AC974F752CB71A010022EC30 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC974F742CB71A010022EC30 /* CalendarManager.swift */; };
 		ACDC9BD22BF7F39F008C5B21 /* RecorderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC9BD12BF7F39F008C5B21 /* RecorderModel.swift */; };
 		ACDC9C662BFD15A4008C5B21 /* hands-together.gesturecomposer in Resources */ = {isa = PBXBuildFile; fileRef = ACDC9C642BFD15A4008C5B21 /* hands-together.gesturecomposer */; };
 		ACDC9C682BFD1D84008C5B21 /* spiderman.gesturecomposer in Resources */ = {isa = PBXBuildFile; fileRef = ACDC9C672BFD1D84008C5B21 /* spiderman.gesturecomposer */; };
@@ -90,6 +91,7 @@
 		AC81CAD02BED259800933492 /* GENIUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GENIUSTests.swift; sourceTree = "<group>"; };
 		AC953E912C48253C002D8190 /* SpiderMan.usda */ = {isa = PBXFileReference; lastKnownFileType = text; name = SpiderMan.usda; path = Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/SpiderMan.usda; sourceTree = "<group>"; };
 		AC953E972C4EB29D002D8190 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		AC974F742CB71A010022EC30 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		ACDC9BD12BF7F39F008C5B21 /* RecorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderModel.swift; sourceTree = "<group>"; };
 		ACDC9C642BFD15A4008C5B21 /* hands-together.gesturecomposer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "hands-together.gesturecomposer"; sourceTree = "<group>"; };
 		ACDC9C672BFD1D84008C5B21 /* spiderman.gesturecomposer */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spiderman.gesturecomposer; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				2FD48EDA2C1252F1002DBC5D /* Sketchfab.swift */,
 				4516FB4F2C19ED6200D0F913 /* GraphManager.swift */,
 				AC43085F2C19EC430089EC65 /* PolarisManager.swift */,
+				AC974F742CB71A010022EC30 /* CalendarManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				2F714BC62C18B31700F309F1 /* ModelView.swift in Sources */,
 				2FD48ED52C0E4812002DBC5D /* Speaker.swift in Sources */,
 				AC81CABF2BED259700933492 /* ContentView.swift in Sources */,
+				AC974F752CB71A010022EC30 /* CalendarManager.swift in Sources */,
 				AC81CABD2BED259700933492 /* GENIUSApp.swift in Sources */,
 				ACDC9C782BFE72A9008C5B21 /* MeetingManager.swift in Sources */,
 				4516FB502C19ED6200D0F913 /* GraphManager.swift in Sources */,

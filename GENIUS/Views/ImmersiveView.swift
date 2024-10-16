@@ -189,7 +189,7 @@ struct ImmersiveView: View {
        do {
            for try await gesture in detector.detectedGestures {
                let detectedGesture = gesture.description
-               
+               //print(detectedGesture)
                //Check recording gesture
                if !recording && detectStart(gestureWanted: "All fingers then thumb", detectedGesture: detectedGesture) {
                    recording = true

@@ -25,6 +25,7 @@ struct ContentView: View {
     @Environment(\.openWindow) var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
     @State private var showAlert = false
+
     
     var body: some View {
         NavigationStack {
@@ -89,6 +90,17 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack(spacing: 30) {
+//                        Button("Add Event") {
+//                            addEventToToday()
+//                        }
+//                        .buttonStyle(.borderedProminent)
+//                        Button("test new llama") {
+//                            do {
+//                                Task {
+//                                    try await print(argo.getResponse(prompt: "What is your name",model: "Llama3.1 7B", context: false))
+//                                }
+//                            }
+//                        }
                         Button(action: {
                             updatingTextHolder.isRecording.toggle()
                             if updatingTextHolder.isRecording {
@@ -139,6 +151,25 @@ struct ContentView: View {
             }
         }
     }
+    
+    
+    
+    private func addEventToToday() {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            guard let eventDate = dateFormatter.date(from: "10/14/2024") else {
+                print("Invalid date format")
+                return
+            }
+            
+            let calendarManager = CalendarManager(meetingName: "test", time: "5PM", day: "\(eventDate)")
+            
+            DispatchQueue.main.async {
+                updatingTextHolder.calendarManager.append(calendarManager)
+                print("Added event: test for 10/09/2024 at 5PM")
+            }
+            print(updatingTextHolder.calendarManager)
+        }
 
 }
 
@@ -181,7 +212,9 @@ final class UpdatingTextHolder: ObservableObject {
     @Published var recongnizedText: String = ""
     @Published var isRecording: Bool = false
     @Published var mode: String = " "
+    @Published var schedule: String = " "
     @Published var meetingManagers: [MeetingManager] = []
+    @Published var calendarManager: [CalendarManager] = []
     
     private init() {}
 }
