@@ -90,10 +90,10 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack(spacing: 30) {
-                        Button("Add Event") {
-                            addEventToToday()
-                        }
-                        .buttonStyle(.borderedProminent)
+//                        Button("Add Event") {
+//                            addEventToToday()
+//                        }
+//                        .buttonStyle(.borderedProminent)
 //                        Button("test new llama") {
 //                            do {
 //                                Task {

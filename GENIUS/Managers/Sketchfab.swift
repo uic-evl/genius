@@ -31,6 +31,7 @@ func sketchFabSearch(q: String) async throws -> [Result] {
     // Check if response is valid
     guard let httpResponse = response as? HTTPURLResponse,
           (200...299).contains(httpResponse.statusCode) else {
+        print(response)
         print("Sketchfab: Invalid Response")
         throw URLError(.badServerResponse)
     }

@@ -466,13 +466,15 @@ class Argo : ObservableObject {
                 dateFormatter.dateFormat = "MM/dd/yyyy"
                 let formattedDate = dateFormatter.string(from: current_date)
 
-                let request = all_meetings + " Using this list of meetings and the current date, " + formattedDate + "answer this question the best you can. Make sure to tell me the name, time and date for the meeting: " + question
+                let request = all_meetings + " Using this list of meetings and the current date, " + formattedDate + "answer this question the best you can. Make sure to tell me the name, time(convert from military) and date for the meeting: " + question
                 let response = try await getResponse(prompt: request, model: curModel)
                 print("response:", response, "response done")
                 
                 updatingTextHolder.responseText = response
-                updatingTextHolder.mode = ""
+                speaker.speak(text: response)
 
+                updatingTextHolder.mode = ""
+                    
             }
         }
     }
