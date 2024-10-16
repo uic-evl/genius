@@ -112,6 +112,7 @@ class Argo : ObservableObject {
         // Check if response is valid
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
+            print(response)
             print("Invalid Response")
             return "Invalid Response"
         }
@@ -150,9 +151,9 @@ class Argo : ObservableObject {
             return
         }
         print("recording in Argo", recording)
-        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
+        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting. Choose prompt if the user has asked a question or wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
         Task {
-            let mode = try await getResponse(prompt: prompt, model: "Argo")
+            let mode = try await getResponse(prompt: prompt, model: "Llama3.1 7B", context: false)
             print("Mode:", mode, "done")
             if mode.contains("meeting") {
                 self.handleMeeting()
@@ -184,8 +185,8 @@ class Argo : ObservableObject {
         if let range = updatingTextHolder.recongnizedText.range(of: "record meeting ") {
             do{
                 Task {
-                    let meeting =  try await getResponse(prompt: "Added proper punctuation and fix any spelling or grammar errors you find: " + String(updatingTextHolder.recongnizedText[(range.upperBound...)]), model: "Argo")
-                    let meetingName = try await getResponse(prompt: "Come up with a short name to describe this meeting: " + meeting, model: "Argo")
+                    let meeting =  try await getResponse(prompt: "Added proper punctuation and fix any spelling or grammar errors you find: " + String(updatingTextHolder.recongnizedText[(range.upperBound...)]), model: "Llama3.1 7B")
+                    let meetingName = try await getResponse(prompt: "Come up with a short name to describe this meeting: " + meeting, model: "Llama3.1 7B")
                     let newMeeting = MeetingManager(meetingText: meeting, meetingName: meetingName)
                     newMeeting.summarizeMeeting()
                     updatingTextHolder.meetingManagers.append(newMeeting)
@@ -203,7 +204,7 @@ class Argo : ObservableObject {
         do {
             Task {
                 // call Argo API to get response to prompt
-                let response = try await getResponse(prompt: question, model: "Argo")
+                let response = try await getResponse(prompt: "Provide a response as if you are speaking: " + question, model: "Llama3.1 7B")
                 print("response:", response, "response done")
                 
                 // call text to speech function with the response from Argo
@@ -240,7 +241,7 @@ class Argo : ObservableObject {
                     updatingTextHolder.responseText = "Sorry, I couldn't find a model for that."
                     return
                 }
-                modelSearch = try await getResponse(prompt: prompt, model: "Argo")
+                modelSearch = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
 
                 print("Searching for: \(modelSearch)")
 
@@ -254,9 +255,10 @@ class Argo : ObservableObject {
             for result in results {
                 models[result.uid] = result.name
             }
-            
+            print(models)
             // Use the names of models to pick the one to open
-            prompt = "Your response must be one phrase with no spaces or punctuation: You have previously created a search query for a 3D model. That search has been ran and now I have the results as a dictionary of models in the form (uid, name). Here is the dictionary of models: \(models). Based on the search: '\(modelSearch)' and our previous discussion, decide which model's name best matches. Please provide ONLY the uid of the matching model. Your response must only include the uid."
+//            prompt = "Your response must be one phrase with no spaces or punctuation: You have previously created a search query for a 3D model. That search has been ran and now I have the results as a dictionary of models in the form (uid, name). Here is the dictionary of models: \(models). Based on the search: '\(modelSearch)' and our previous discussion, decide which model's name best matches. Please provide ONLY the uid of the matching model. Your response must only include the uid."
+            prompt = "I am searching for a 3D model using the query '\(modelSearch)'. The results are provided as a dictionary in the form (name, uid): \(models). Choose the name that best fits my search query and respond with the uid associated with that name. Your response must be ONLY the uid with no spaces or other words."
             
             attempts = 0
             var modelToOpen = ""
@@ -269,7 +271,7 @@ class Argo : ObservableObject {
                     print("No valid UID generated")
                     return
                 }
-                modelToOpen = try await getResponse(prompt: prompt, model: "Argo")
+                modelToOpen = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
                 print("model to open:", modelToOpen)
                 attempts += 1
             }
@@ -304,7 +306,7 @@ class Argo : ObservableObject {
                 // Prompt Llama to give a spoken response on the simulation
                 let prompt2 = "You just provided me with these parameters: \(parameters) for a fluid dynamics simulation in this order: density, speed, length, viscosity, time, frequency. Respond to this sentence using less than 5 sentences as if you are speaking to me as you show the simulation: \(updatingTextHolder.recongnizedText). Do not use asterisks, you are only speaking."
                 
-                let response = try await getResponse(prompt: prompt2, model: "Llama")
+                let response = try await getResponse(prompt: prompt2, model: "Llama3.1 7B")
                 
                 // Update UI and speak response
                 updatingTextHolder.responseText = response
@@ -330,7 +332,7 @@ class Argo : ObservableObject {
                     // Generate the parameters for the simulation
                     let prompt = "Respond only in a comma seperated string. The user would like to run a simulation of fluid dynamics. The parameters and their defaults are the following: density: 1000, speed: 1.0, length: 2.5, viscosity: 1.3806, time: 8.0, freq: 0.04.  Here is the user's prompt: \(updatingTextHolder.recongnizedText). Your job is to generate the parameters for the simulation given the user prompt. If the conversation context includes previously generated parameters, start with those numbers instead of the default values and adjust them as needed to fulfill the user's request. Otherwise if the user says to simply run the simulation, return the default values. Your response should be the parameters as a string of numbers seperated by commas with no spaces in the order: density, speed, length, viscosity, time, frequency. Do not use any words."
                     
-                    simParams = try await getResponse(prompt: prompt, model: "Llama")
+                    simParams = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
                     
                     // Split the input string by commas
                     let values = simParams.split(separator: ",")
@@ -357,7 +359,7 @@ class Argo : ObservableObject {
                     // Ask user if these paramters are acceptable
                     let confirmPrompt = "I want to run a fluid dynamics simulation. You have just provided these parameters (\(simParams)) for a fluid dynamics simulation in this order: density, speed, length, viscosity, time, frequency. Respond to this in less than 3 sentences telling me the parameters you generated and asking if I want to confirm these parameters. Only if any parameter was adjusted tell me which parameter and what you changed. Speak in a conversational manner and be helpful. Make sure your response is using some different words from the previous context to not be repetitive."
                     
-                    let confirmTTS = try await getResponse(prompt: confirmPrompt, model: "Argo")
+                    let confirmTTS = try await getResponse(prompt: confirmPrompt, model: "Llama3.1 7B")
                     speaker.speak(text: confirmTTS)
                     
                     conversationManager.addEntry(prompt: updatingTextHolder.recongnizedText, response: paramString)
@@ -388,7 +390,7 @@ class Argo : ObservableObject {
         let userPrompt = updatingTextHolder.recongnizedText
         Task {
             let prompt = "Respond only in a space-separated string of protein names. The user wishes to visualize a graph of protein interactions. You must parse the user's prompt and return the names of any proteins you recognize. Do not add any proteins of your own volition. Any proteins you return must be valid proteins, so do your best to match the user's words to protein names. Assume all proteins are human-specific. If unable to find any proteins, respond with 'Not found'. Here is the user's prompt: \(userPrompt)"
-            let names = try await getResponse(prompt: prompt, model: "Llama")
+            let names = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
             getData(proteins: names, species: "9606") { (p,i) in
                 self.updatingTextHolder.mode = "Building model..."
                 graph.setData(p: p, i: i)

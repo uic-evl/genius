@@ -28,7 +28,7 @@ class MeetingManager : Identifiable {
     func summarizeMeeting() {
         do {
             Task {
-                summary = try await Argo().getResponse(prompt: "Summarize this information all of this " + self.meetingText, model: "Argo")
+                summary = try await Argo().getResponse(prompt: "Summarize this information all of this " + self.meetingText, model: "Llama3.1 7B")
 
             }
         }
@@ -73,7 +73,7 @@ class MeetingManager : Identifiable {
         else {
             do {
                 Task {
-                    let response = try await Argo().getResponse(prompt: "Using this info '" + meetingText + "' " + recording, model: "Argo")
+                    let response = try await Argo().getResponse(prompt: "Using this info '" + meetingText + "' " + recording, model: "Llama3.1 7B")
                     speaker.speak(text: response)
                     Argo().conversationManager.addEntry(prompt: recording, response: response)
                 }

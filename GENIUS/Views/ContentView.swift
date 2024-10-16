@@ -89,13 +89,6 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack(spacing: 30) {
-                        Button("test new llama") {
-                            do {
-                                Task {
-                                    try await print(argo.getResponse(prompt: "What is your name",model: "Llama3.1 7B", context: false))
-                                }
-                            }
-                        }
                         Button(action: {
                             updatingTextHolder.isRecording.toggle()
                             if updatingTextHolder.isRecording {

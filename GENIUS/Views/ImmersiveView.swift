@@ -189,7 +189,7 @@ struct ImmersiveView: View {
        do {
            for try await gesture in detector.detectedGestures {
                let detectedGesture = gesture.description
-               print(detectedGesture)
+               
                //Check recording gesture
                if !recording && detectStart(gestureWanted: "All fingers then thumb", detectedGesture: detectedGesture) {
                    recording = true
@@ -216,7 +216,7 @@ struct ImmersiveView: View {
                
                if  detectStart(gestureWanted: "Spider-Man", detectedGesture: detectedGesture) {
                    
-                    print("loading")
+                    
                     loadSpidermanScene()
                     spidermanActive = true
                     }
@@ -237,7 +237,7 @@ struct ImmersiveView: View {
             let spidermanEntity = try Entity.loadModel(contentsOf: spidermanURL)
             spidermanEntity.name = "Spiderman"
             headTrackedEntity.addChild(spidermanEntity)
-            print("Spiderman scene loaded successfully")
+            // print("Spiderman scene loaded successfully")
         } catch {
             print("Error loading Spiderman scene: \(error)")
         }
