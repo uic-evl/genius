@@ -138,7 +138,6 @@ class Argo : ObservableObject {
             print("invalid json response")
             return "Error"
         }
-        
     }
     
     // Extract mode needed based on user's recognized text
@@ -146,10 +145,14 @@ class Argo : ObservableObject {
         let recording = updatingTextHolder.recongnizedText
         if recording == " " {
             speaker.speak(text: "Sorry I didn't get that")
+            updatingTextHolder.responseText = "Sorry, I didn't get that."
             return
         }
         print("recording ", recording)
-        let prompt = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
+//        allModes = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
+        
+        let noSim = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something.Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
+        let prompt = noSim
         Task {
             let mode = try await getResponse(prompt: prompt, model: curModel)
             print("Mode:", mode, "done")
@@ -209,7 +212,7 @@ class Argo : ObservableObject {
         do {
             Task {
                 // call Argo API to get response to prompt
-                let response = try await getResponse(prompt: "Provide a response as if you are speaking: " + question, model: "Llama3.1 7B")
+                let response = try await getResponse(prompt: "Provide a response to this in a concise manner as if you're speaking and don't use asterisk actions: " + question, model: curModel)
                 print("response:", response, "response done")
                 
                 // call text to speech function with the response from LLM
@@ -311,7 +314,7 @@ class Argo : ObservableObject {
                 // Prompt Llama to give a spoken response on the simulation
                 let prompt2 = "You just provided me with these parameters: \(parameters) for a fluid dynamics simulation in this order: density, speed, length, viscosity, time, frequency. Respond to this sentence using less than 5 sentences as if you are speaking to me as you show the simulation: \(updatingTextHolder.recongnizedText). Do not use asterisks, you are only speaking."
                 
-                let response = try await getResponse(prompt: prompt2, model: "Llama")
+                let response = try await getResponse(prompt: prompt2, model: curModel)
                 
                 // Update UI and speak response
                 updatingTextHolder.responseText = response
@@ -337,7 +340,7 @@ class Argo : ObservableObject {
                     // Generate the parameters for the simulation
                     let prompt = "Respond only in a comma seperated string. The user would like to run a simulation of fluid dynamics. The parameters and their defaults are the following: density: 1000, speed: 1.0, length: 2.5, viscosity: 1.3806, time: 8.0, freq: 0.04.  Here is the user's prompt: \(updatingTextHolder.recongnizedText). Your job is to generate the parameters for the simulation given the user prompt. If the conversation context includes previously generated parameters, start with those numbers instead of the default values and adjust them as needed to fulfill the user's request. Otherwise if the user says to simply run the simulation, return the default values. Your response should be the parameters as a string of numbers seperated by commas with no spaces in the order: density, speed, length, viscosity, time, frequency. Do not use any words."
                     
-                    simParams = try await getResponse(prompt: prompt, model: "Llama")
+                    simParams = try await getResponse(prompt: prompt, model: curModel)
                     
                     // Split the input string by commas
                     let values = simParams.split(separator: ",")
@@ -371,7 +374,6 @@ class Argo : ObservableObject {
                     updatingTextHolder.responseText = paramString
                     updatingTextHolder.mode = " "
                     
-                    
                     question = true
                     lastFunction = "simulation"
                     return ""
@@ -395,7 +397,7 @@ class Argo : ObservableObject {
         let userPrompt = updatingTextHolder.recongnizedText
         Task {
             let prompt = "Respond only in a space-separated string of protein names. The user wishes to visualize a graph of protein interactions. You must parse the user's prompt and return the names of any proteins you recognize. Do not add any proteins of your own volition. Any proteins you return must be valid proteins, so do your best to match the user's words to protein names. Assume all proteins are human-specific. If unable to find any proteins, respond with 'Not found'. Here is the user's prompt: \(userPrompt)"
-            let names = try await getResponse(prompt: prompt, model: "Llama3.1 7B")
+            let names = try await getResponse(prompt: prompt, model: curModel)
             getData(proteins: names, species: "9606") { (p,i) in
                 self.updatingTextHolder.mode = "Building model..."
                 graph.setData(p: p, i: i)
@@ -491,5 +493,6 @@ class Argo : ObservableObject {
             self.dismissWindow(id: "sim")
             self.dismissWindow(id: "model")
         }
+        conversationManager.clear()
     }
 }

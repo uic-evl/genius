@@ -25,7 +25,6 @@ struct ContentView: View {
     @Environment(\.openWindow) var openWindow
     @Environment(\.dismissWindow) private var dismissWindow
     @State private var showAlert = false
-
     
     var body: some View {
         NavigationStack {

@@ -21,8 +21,9 @@ class Recorder: ObservableObject {
         speechSynthesizer.stopSpeaking(at: .immediate)
         
         
-        // reset recognized text
+        // reset Text boxes
         updatingTextHolder.recongnizedText = " "
+        updatingTextHolder.responseText = " "
         guard speechRecognizer.isAvailable else {
             print("Speech recognition is not available on this device")
             return

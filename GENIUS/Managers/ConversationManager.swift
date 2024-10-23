@@ -43,5 +43,9 @@ class ConversationManager: ObservableObject {
         }
         return context
     }
+    
+    func clear() {
+        conversationHistory = []
+    }
 }
 
