@@ -1,0 +1,18 @@
+-
+  action: "add_commands"
+  commands:
+    c1:
+      params:
+        callback: "setStability"
+        mpi_behavior: "all"
+-
+  action: "add_triggers"
+  triggers:
+    t1:
+      params:
+        callback: "isStable"
+        actions_file : "stable_actions.yaml"
+    t2:
+      params:
+        callback: "isUnstable"
+        actions_file : "unstable_actions.yaml"

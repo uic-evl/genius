@@ -1,0 +1,1413 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 5.14.21-150500.55.49-default - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/cray/pe/craype/2.7.30/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/cray/pe/craype/2.7.30/bin/CC 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S"
+      binary: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S'
+        
+        Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4223c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4223c.dir/build.make CMakeFiles/cmTC_4223c.dir/build
+        gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S'
+        Building C object CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o
+        /opt/cray/pe/craype/2.7.30/bin/cc   -v -o CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o -c /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=gcc-12
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-dumpdir' 'CMakeFiles/cmTC_4223c.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/cc1 -quiet -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4223c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=znver3 -version -o /tmp/ccUrDrBQ.s
+        GNU C17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)
+        	compiled by GNU C version 12.3.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include
+         /opt/cray/pals/1.3.4/include
+         /opt/cray/pe/pmi/6.1.13/include
+         /opt/cray/pe/dsmml/0.2.2/dsmml//include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include
+         /usr/lib64/gcc/x86_64-suse-linux/12/include
+         /usr/local/include
+         /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include
+         /usr/include
+        End of search list.
+        GNU C17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)
+        	compiled by GNU C version 12.3.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 00000000000000000000000000000000
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-dumpdir' 'CMakeFiles/cmTC_4223c.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/as -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include --64 -o CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o /tmp/ccUrDrBQ.s
+        GNU assembler version 2.41.0 (x86_64-suse-linux) using BFD version (GNU Binutils; SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-dumpdir' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_4223c
+        /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4223c.dir/link.txt --verbose=1
+        /opt/cray/pe/craype/2.7.30/bin/cc  -v CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o -o cmTC_4223c 
+        Using built-in specs.
+        COLLECT_GCC=gcc-12
+        COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_4223c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-dumpdir' 'cmTC_4223c.'
+         /usr/lib64/gcc/x86_64-suse-linux/12/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccry12OD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4223c /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o -L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib -L/opt/cray/pals/1.3.4/lib -L/opt/cray/pe/pmi/6.1.13/lib -L/opt/cray/pe/dsmml/0.2.2/dsmml//lib -L/soft/perftools/darshan/darshan-3.4.4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12 -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../.. CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o -Bdynamic -rpath=/soft/perftools/darshan/darshan-3.4.4/lib -no-as-needed -ldarshan -lz --as-needed -lpals --no-as-needed --as-needed -lpmi --no-as-needed --as-needed -lpmi2 --no-as-needed --as-needed -lmpi_gnu_123 --no-as-needed --as-needed -ldsmml --no-as-needed --as-needed -lgfortran -lquadmath --no-as-needed --as-needed -lmvec --no-as-needed --as-needed -lm --no-as-needed --as-needed -lpthread --no-as-needed --disable-new-dtags -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib64/gcc/x86_64-suse-linux/12/crtend.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_4223c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-dumpdir' 'cmTC_4223c.'
+        gmake[1]: Leaving directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+          add: [/opt/cray/pals/1.3.4/include]
+          add: [/opt/cray/pe/pmi/6.1.13/include]
+          add: [/opt/cray/pe/dsmml/0.2.2/dsmml//include]
+          add: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+          add: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/include]
+          add: [/usr/local/include]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include] ==> [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        collapse include dir [/opt/cray/pals/1.3.4/include] ==> [/opt/cray/pals/1.3.4/include]
+        collapse include dir [/opt/cray/pe/pmi/6.1.13/include] ==> [/opt/cray/pe/pmi/6.1.13/include]
+        collapse include dir [/opt/cray/pe/dsmml/0.2.2/dsmml//include] ==> [/opt/cray/pe/dsmml/0.2.2/dsmml/include]
+        collapse include dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        collapse include dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/include] ==> [/usr/lib64/gcc/x86_64-suse-linux/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed] ==> [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include] ==> [/usr/x86_64-suse-linux/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include;/opt/cray/pals/1.3.4/include;/opt/cray/pe/pmi/6.1.13/include;/opt/cray/pe/dsmml/0.2.2/dsmml/include;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include;/usr/lib64/gcc/x86_64-suse-linux/12/include;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed;/usr/x86_64-suse-linux/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S']
+        ignore line: []
+        ignore line: [Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4223c/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_4223c.dir/build.make CMakeFiles/cmTC_4223c.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rKG91S']
+        ignore line: [Building C object CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/opt/cray/pe/craype/2.7.30/bin/cc   -v -o CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o -c /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=gcc-12]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-dumpdir' 'CMakeFiles/cmTC_4223c.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/cc1 -quiet -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4223c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=znver3 -version -o /tmp/ccUrDrBQ.s]
+        ignore line: [GNU C17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        ignore line: [ /opt/cray/pals/1.3.4/include]
+        ignore line: [ /opt/cray/pe/pmi/6.1.13/include]
+        ignore line: [ /opt/cray/pe/dsmml/0.2.2/dsmml//include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 00000000000000000000000000000000]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-dumpdir' 'CMakeFiles/cmTC_4223c.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/as -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include --64 -o CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o /tmp/ccUrDrBQ.s]
+        ignore line: [GNU assembler version 2.41.0 (x86_64-suse-linux) using BFD version (GNU Binutils]
+        ignore line: [ SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-dumpdir' 'CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_4223c]
+        ignore line: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4223c.dir/link.txt --verbose=1]
+        ignore line: [/opt/cray/pe/craype/2.7.30/bin/cc  -v CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o -o cmTC_4223c ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=gcc-12]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_4223c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-dumpdir' 'cmTC_4223c.']
+        link line: [ /usr/lib64/gcc/x86_64-suse-linux/12/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccry12OD.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4223c /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o -L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib -L/opt/cray/pals/1.3.4/lib -L/opt/cray/pe/pmi/6.1.13/lib -L/opt/cray/pe/dsmml/0.2.2/dsmml//lib -L/soft/perftools/darshan/darshan-3.4.4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12 -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../.. CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o -Bdynamic -rpath=/soft/perftools/darshan/darshan-3.4.4/lib -no-as-needed -ldarshan -lz --as-needed -lpals --no-as-needed --as-needed -lpmi --no-as-needed --as-needed -lpmi2 --no-as-needed --as-needed -lmpi_gnu_123 --no-as-needed --as-needed -ldsmml --no-as-needed --as-needed -lgfortran -lquadmath --no-as-needed --as-needed -lmvec --no-as-needed --as-needed -lm --no-as-needed --as-needed -lpthread --no-as-needed --disable-new-dtags -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib64/gcc/x86_64-suse-linux/12/crtend.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccry12OD.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_4223c] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o]
+          arg [-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib] ==> dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib]
+          arg [-L/opt/cray/pals/1.3.4/lib] ==> dir [/opt/cray/pals/1.3.4/lib]
+          arg [-L/opt/cray/pe/pmi/6.1.13/lib] ==> dir [/opt/cray/pe/pmi/6.1.13/lib]
+          arg [-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib] ==> dir [/opt/cray/pe/dsmml/0.2.2/dsmml//lib]
+          arg [-L/soft/perftools/darshan/darshan-3.4.4/lib] ==> dir [/soft/perftools/darshan/darshan-3.4.4/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib] ==> dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib]
+          arg [-L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib] ==> dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../..] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../..]
+          arg [CMakeFiles/cmTC_4223c.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-rpath=/soft/perftools/darshan/darshan-3.4.4/lib] ==> ignore
+          arg [-no-as-needed] ==> ignore
+          arg [-ldarshan] ==> lib [darshan]
+          arg [-lz] ==> lib [z]
+          arg [--as-needed] ==> ignore
+          arg [-lpals] ==> lib [pals]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpmi] ==> lib [pmi]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpmi2] ==> lib [pmi2]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lmpi_gnu_123] ==> lib [mpi_gnu_123]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-ldsmml] ==> lib [dsmml]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgfortran] ==> lib [gfortran]
+          arg [-lquadmath] ==> lib [quadmath]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lmvec] ==> lib [mvec]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lm] ==> lib [m]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpthread] ==> lib [pthread]
+          arg [--no-as-needed] ==> ignore
+          arg [--disable-new-dtags] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib] ==> [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib]
+        collapse library dir [/opt/cray/pals/1.3.4/lib] ==> [/opt/cray/pals/1.3.4/lib]
+        collapse library dir [/opt/cray/pe/pmi/6.1.13/lib] ==> [/opt/cray/pe/pmi/6.1.13/lib]
+        collapse library dir [/opt/cray/pe/dsmml/0.2.2/dsmml//lib] ==> [/opt/cray/pe/dsmml/0.2.2/dsmml/lib]
+        collapse library dir [/soft/perftools/darshan/darshan-3.4.4/lib] ==> [/soft/perftools/darshan/darshan-3.4.4/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12] ==> [/usr/lib64/gcc/x86_64-suse-linux/12]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib]
+        collapse library dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib] ==> [/usr/x86_64-suse-linux/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../..] ==> [/usr/lib64]
+        implicit libs: [darshan;z;pals;pmi;pmi2;mpi_gnu_123;dsmml;gfortran;quadmath;mvec;m;pthread;gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o;/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib;/opt/cray/pals/1.3.4/lib;/opt/cray/pe/pmi/6.1.13/lib;/opt/cray/pe/dsmml/0.2.2/dsmml/lib;/soft/perftools/darshan/darshan-3.4.4/lib;/usr/lib64/gcc/x86_64-suse-linux/12;/usr/lib64;/lib64;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib;/usr/x86_64-suse-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV"
+      binary: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV'
+        
+        Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fd553/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fd553.dir/build.make CMakeFiles/cmTC_fd553.dir/build
+        gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV'
+        Building CXX object CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o
+        /opt/cray/pe/craype/2.7.30/bin/CC   -v -o CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o -c /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=g++-12
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_fd553.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -quiet -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_fd553.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=znver3 -version -o /tmp/ccFBAX79.s
+        GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)
+        	compiled by GNU C version 12.3.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include
+         /opt/cray/pals/1.3.4/include
+         /opt/cray/pe/pmi/6.1.13/include
+         /opt/cray/pe/dsmml/0.2.2/dsmml//include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include
+         /usr/include/c++/12
+         /usr/include/c++/12/x86_64-suse-linux
+         /usr/include/c++/12/backward
+         /usr/lib64/gcc/x86_64-suse-linux/12/include
+         /usr/local/include
+         /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include
+         /usr/include
+        End of search list.
+        GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)
+        	compiled by GNU C version 12.3.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 00000000000000000000000000000000
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_fd553.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/as -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include --64 -o CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccFBAX79.s
+        GNU assembler version 2.41.0 (x86_64-suse-linux) using BFD version (GNU Binutils; SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_fd553
+        /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd553.dir/link.txt --verbose=1
+        /opt/cray/pe/craype/2.7.30/bin/CC  -v CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fd553 
+        Using built-in specs.
+        COLLECT_GCC=g++-12
+        COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_fd553' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-shared-libgcc' '-dumpdir' 'cmTC_fd553.'
+         /usr/lib64/gcc/x86_64-suse-linux/12/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8ZOxaS.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fd553 /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o -L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib -L/opt/cray/pals/1.3.4/lib -L/opt/cray/pe/pmi/6.1.13/lib -L/opt/cray/pe/dsmml/0.2.2/dsmml//lib -L/soft/perftools/darshan/darshan-3.4.4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12 -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../.. CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o -Bdynamic -rpath=/soft/perftools/darshan/darshan-3.4.4/lib -no-as-needed -ldarshan -lz --as-needed -lpals --no-as-needed --as-needed -lpmi --no-as-needed --as-needed -lpmi2 --no-as-needed --as-needed -lmpi_gnu_123 --no-as-needed --as-needed -ldsmml --no-as-needed --as-needed -lgfortran -lquadmath --no-as-needed --as-needed -lmvec --no-as-needed --as-needed -lm --no-as-needed --as-needed -lpthread --no-as-needed --disable-new-dtags -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/12/crtend.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_fd553' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-shared-libgcc' '-dumpdir' 'cmTC_fd553.'
+        gmake[1]: Leaving directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+          add: [/opt/cray/pals/1.3.4/include]
+          add: [/opt/cray/pe/pmi/6.1.13/include]
+          add: [/opt/cray/pe/dsmml/0.2.2/dsmml//include]
+          add: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+          add: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+          add: [/usr/include/c++/12]
+          add: [/usr/include/c++/12/x86_64-suse-linux]
+          add: [/usr/include/c++/12/backward]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/include]
+          add: [/usr/local/include]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include] ==> [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        collapse include dir [/opt/cray/pals/1.3.4/include] ==> [/opt/cray/pals/1.3.4/include]
+        collapse include dir [/opt/cray/pe/pmi/6.1.13/include] ==> [/opt/cray/pe/pmi/6.1.13/include]
+        collapse include dir [/opt/cray/pe/dsmml/0.2.2/dsmml//include] ==> [/opt/cray/pe/dsmml/0.2.2/dsmml/include]
+        collapse include dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        collapse include dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        collapse include dir [/usr/include/c++/12] ==> [/usr/include/c++/12]
+        collapse include dir [/usr/include/c++/12/x86_64-suse-linux] ==> [/usr/include/c++/12/x86_64-suse-linux]
+        collapse include dir [/usr/include/c++/12/backward] ==> [/usr/include/c++/12/backward]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/include] ==> [/usr/lib64/gcc/x86_64-suse-linux/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed] ==> [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include] ==> [/usr/x86_64-suse-linux/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include;/opt/cray/pals/1.3.4/include;/opt/cray/pe/pmi/6.1.13/include;/opt/cray/pe/dsmml/0.2.2/dsmml/include;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include;/usr/include/c++/12;/usr/include/c++/12/x86_64-suse-linux;/usr/include/c++/12/backward;/usr/lib64/gcc/x86_64-suse-linux/12/include;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed;/usr/x86_64-suse-linux/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV']
+        ignore line: []
+        ignore line: [Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fd553/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_fd553.dir/build.make CMakeFiles/cmTC_fd553.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-rgihGV']
+        ignore line: [Building CXX object CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/opt/cray/pe/craype/2.7.30/bin/CC   -v -o CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o -c /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=g++-12]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_fd553.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -quiet -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_fd553.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=znver3 -version -o /tmp/ccFBAX79.s]
+        ignore line: [GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        ignore line: [ /opt/cray/pals/1.3.4/include]
+        ignore line: [ /opt/cray/pe/pmi/6.1.13/include]
+        ignore line: [ /opt/cray/pe/dsmml/0.2.2/dsmml//include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        ignore line: [ /usr/include/c++/12]
+        ignore line: [ /usr/include/c++/12/x86_64-suse-linux]
+        ignore line: [ /usr/include/c++/12/backward]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 00000000000000000000000000000000]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_fd553.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/as -v -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include --64 -o CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccFBAX79.s]
+        ignore line: [GNU assembler version 2.41.0 (x86_64-suse-linux) using BFD version (GNU Binutils]
+        ignore line: [ SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_fd553]
+        ignore line: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd553.dir/link.txt --verbose=1]
+        ignore line: [/opt/cray/pe/craype/2.7.30/bin/CC  -v CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fd553 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=g++-12]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_fd553' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-shared-libgcc' '-dumpdir' 'cmTC_fd553.']
+        link line: [ /usr/lib64/gcc/x86_64-suse-linux/12/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8ZOxaS.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_fd553 /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o -L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib -L/opt/cray/pals/1.3.4/lib -L/opt/cray/pe/pmi/6.1.13/lib -L/opt/cray/pe/dsmml/0.2.2/dsmml//lib -L/soft/perftools/darshan/darshan-3.4.4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12 -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../.. CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o -Bdynamic -rpath=/soft/perftools/darshan/darshan-3.4.4/lib -no-as-needed -ldarshan -lz --as-needed -lpals --no-as-needed --as-needed -lpmi --no-as-needed --as-needed -lpmi2 --no-as-needed --as-needed -lmpi_gnu_123 --no-as-needed --as-needed -ldsmml --no-as-needed --as-needed -lgfortran -lquadmath --no-as-needed --as-needed -lmvec --no-as-needed --as-needed -lm --no-as-needed --as-needed -lpthread --no-as-needed --disable-new-dtags -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/12/crtend.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc8ZOxaS.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_fd553] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o]
+          arg [-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib] ==> dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib]
+          arg [-L/opt/cray/pals/1.3.4/lib] ==> dir [/opt/cray/pals/1.3.4/lib]
+          arg [-L/opt/cray/pe/pmi/6.1.13/lib] ==> dir [/opt/cray/pe/pmi/6.1.13/lib]
+          arg [-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib] ==> dir [/opt/cray/pe/dsmml/0.2.2/dsmml//lib]
+          arg [-L/soft/perftools/darshan/darshan-3.4.4/lib] ==> dir [/soft/perftools/darshan/darshan-3.4.4/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib] ==> dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib]
+          arg [-L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib] ==> dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../..] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../..]
+          arg [CMakeFiles/cmTC_fd553.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-rpath=/soft/perftools/darshan/darshan-3.4.4/lib] ==> ignore
+          arg [-no-as-needed] ==> ignore
+          arg [-ldarshan] ==> lib [darshan]
+          arg [-lz] ==> lib [z]
+          arg [--as-needed] ==> ignore
+          arg [-lpals] ==> lib [pals]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpmi] ==> lib [pmi]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpmi2] ==> lib [pmi2]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lmpi_gnu_123] ==> lib [mpi_gnu_123]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-ldsmml] ==> lib [dsmml]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgfortran] ==> lib [gfortran]
+          arg [-lquadmath] ==> lib [quadmath]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lmvec] ==> lib [mvec]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lm] ==> lib [m]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpthread] ==> lib [pthread]
+          arg [--no-as-needed] ==> ignore
+          arg [--disable-new-dtags] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib] ==> [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib]
+        collapse library dir [/opt/cray/pals/1.3.4/lib] ==> [/opt/cray/pals/1.3.4/lib]
+        collapse library dir [/opt/cray/pe/pmi/6.1.13/lib] ==> [/opt/cray/pe/pmi/6.1.13/lib]
+        collapse library dir [/opt/cray/pe/dsmml/0.2.2/dsmml//lib] ==> [/opt/cray/pe/dsmml/0.2.2/dsmml/lib]
+        collapse library dir [/soft/perftools/darshan/darshan-3.4.4/lib] ==> [/soft/perftools/darshan/darshan-3.4.4/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12] ==> [/usr/lib64/gcc/x86_64-suse-linux/12]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib]
+        collapse library dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib] ==> [/usr/x86_64-suse-linux/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../..] ==> [/usr/lib64]
+        implicit libs: [darshan;z;pals;pmi;pmi2;mpi_gnu_123;dsmml;gfortran;quadmath;mvec;m;pthread;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o;/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib;/opt/cray/pals/1.3.4/lib;/opt/cray/pe/pmi/6.1.13/lib;/opt/cray/pe/dsmml/0.2.2/dsmml/lib;/soft/perftools/darshan/darshan-3.4.4/lib;/usr/lib64/gcc/x86_64-suse-linux/12;/usr/lib64;/lib64;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib;/usr/x86_64-suse-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupMPI.cmake:43 (find_package)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:75 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-pNdDlV"
+      binary: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-pNdDlV"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-pNdDlV'
+        
+        Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_74715/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_74715.dir/build.make CMakeFiles/cmTC_74715.dir/build
+        gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-pNdDlV'
+        Building CXX object CMakeFiles/cmTC_74715.dir/test_mpi.cpp.o
+        /opt/cray/pe/craype/2.7.30/bin/CC    -o CMakeFiles/cmTC_74715.dir/test_mpi.cpp.o -c /home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-pNdDlV/test_mpi.cpp
+        Linking CXX executable cmTC_74715
+        /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74715.dir/link.txt --verbose=1
+        /opt/cray/pe/craype/2.7.30/bin/CC -dynamic CMakeFiles/cmTC_74715.dir/test_mpi.cpp.o -o cmTC_74715 
+        gmake[1]: Leaving directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-pNdDlV'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCUDACompiler.cmake:75 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Checking whether the CUDA compiler is NVIDIA using "" matched "nvcc: NVIDIA \\(R\\) Cuda compiler driver":
+      nvcc: NVIDIA (R) Cuda compiler driver
+      Copyright (c) 2005-2023 NVIDIA Corporation
+      Built on Tue_Aug_15_22:02:13_PDT_2023
+      Cuda compilation tools, release 12.2, V12.2.140
+      Build cuda_12.2.r12.2/compiler.33191640_0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:53 (__determine_compiler_id_test)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCUDACompiler.cmake:307 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" succeeded.
+      Compiler: /soft/compilers/cudatoolkit/cuda-12.2.2/bin/nvcc 
+      Build flags: 
+      Id flags: --keep;--keep-dir;tmp;-ccbin=/opt/cray/pe/craype/2.7.30/bin/CC -v
+      
+      The output was:
+      0
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=/soft/compilers/cudatoolkit/cuda-12.2.2/bin
+      #$ _THERE_=/soft/compilers/cudatoolkit/cuda-12.2.2/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_DIR_=targets/x86_64-linux
+      #$ TOP=/soft/compilers/cudatoolkit/cuda-12.2.2/bin/..
+      #$ NVVMIR_LIBRARY_DIR=/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../nvvm/libdevice
+      #$ LD_LIBRARY_PATH=/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../lib:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/camp-2024.02.1/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/conduit-v0.9.1/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/raja-v2024.02.1/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/mfem-4.6/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/hdf5-1.14.1-2/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/umpire-2024.02.1/lib:/soft/visualization/ascent/develop/2024-05-03-8baa78c/zlib-1.3/lib:/soft/compilers/cudatoolkit/cuda-12.2.2/lib64:/soft/perftools/darshan/darshan-3.4.4/lib:/opt/cray/pe/papi/7.0.1.2/lib64:/opt/cray/libfabric/1.15.2.0/lib64
+      #$ PATH=/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../nvvm/bin:/soft/compilers/cudatoolkit/cuda-12.2.2/bin:/soft/xalt/3.0.2-202408282050/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/bin:/opt/cray/pe/python/3.11.5/bin:/soft/compilers/cudatoolkit/cuda-12.2.2/bin:/opt/cray/pals/1.3.4/bin:/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.28/bin:/opt/cray/pe/craype/2.7.30/bin:/soft/perftools/darshan/darshan-3.4.4/bin:/opt/cray/pe/perftools/23.12.0/bin:/opt/cray/pe/papi/7.0.1.2/bin:/opt/cray/libfabric/1.15.2.0/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/local/bin:/usr/bin:/bin:/opt/c3/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/pbs/bin:/sbin:/home/fmassa1/.local/bin:/home/fmassa1/bin:/opt/cray/pe/bin
+      #$ INCLUDES="-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"  
+      #$ LIBRARIES=  "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      #$ rm tmp/a_dlink.reg.c
+      #$ "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ cudafe++ --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" 
+      #$ "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" 
+      #$ cicc --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"
+      #$ ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" 
+      #$ fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" 
+      #$ "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" 
+      #$ nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "/opt/cray/pe/craype/2.7.30/bin/CC"
+      #$ fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" 
+      #$ "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/soft/compilers/cudatoolkit/cuda-12.2.2/bin/crt/link.stub" -o "tmp/a_dlink.o" 
+      #$ "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" 
+      
+      
+      Compilation of the CUDA compiler identification source "CMakeCUDACompilerId.cu" produced "a.out"
+      
+      The CUDA compiler identification is NVIDIA, found in:
+        /home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCUDACompiler.cmake:523 (message)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Parsed CUDA nvcc implicit link information:
+        found 'PATH=' string: [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../nvvm/bin:/soft/compilers/cudatoolkit/cuda-12.2.2/bin:/soft/xalt/3.0.2-202408282050/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/bin:/opt/cray/pe/python/3.11.5/bin:/soft/compilers/cudatoolkit/cuda-12.2.2/bin:/opt/cray/pals/1.3.4/bin:/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.28/bin:/opt/cray/pe/craype/2.7.30/bin:/soft/perftools/darshan/darshan-3.4.4/bin:/opt/cray/pe/perftools/23.12.0/bin:/opt/cray/pe/papi/7.0.1.2/bin:/opt/cray/libfabric/1.15.2.0/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/local/bin:/usr/bin:/bin:/opt/c3/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/pbs/bin:/sbin:/home/fmassa1/.local/bin:/home/fmassa1/bin:/opt/cray/pe/bin]
+        found 'LIBRARIES=' string: ["-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"]
+        considering line: [#$ rm tmp/a_dlink.reg.c]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [cudafe++ --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [cicc --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+        considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+        considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "/opt/cray/pe/craype/2.7.30/bin/CC"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/soft/compilers/cudatoolkit/cuda-12.2.2/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          extracted link line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+        considering line: []
+        extracted link launcher absolute path: [/opt/cray/pe/craype/2.7.30/bin/CC]
+      
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [/opt/cray/pe/craype/2.7.30/bin/CC] ==> ignore
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-m64] ==> ignore
+          arg [-Wl,--start-group] ==> ignore
+          arg [tmp/a_dlink.o] ==> ignore
+          arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+          arg [-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs]
+          arg [-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib] ==> dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib]
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Wl,--end-group] ==> ignore
+          arg [-o] ==> ignore
+          arg [a.out] ==> ignore
+        collapse library dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+        implicit objs: []
+        implicit dirs: [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs;/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCUDACompiler.cmake:579 (message)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Parsed CUDA nvcc include information:
+        found 'PATH=' string: [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../nvvm/bin:/soft/compilers/cudatoolkit/cuda-12.2.2/bin:/soft/xalt/3.0.2-202408282050/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/bin:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/bin:/opt/cray/pe/python/3.11.5/bin:/soft/compilers/cudatoolkit/cuda-12.2.2/bin:/opt/cray/pals/1.3.4/bin:/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/bin:/opt/cray/pe/mpich/8.1.28/bin:/opt/cray/pe/craype/2.7.30/bin:/soft/perftools/darshan/darshan-3.4.4/bin:/opt/cray/pe/perftools/23.12.0/bin:/opt/cray/pe/papi/7.0.1.2/bin:/opt/cray/libfabric/1.15.2.0/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/local/bin:/usr/bin:/bin:/opt/c3/bin:/usr/lib/mit/bin:/usr/lib/mit/sbin:/opt/pbs/bin:/sbin:/home/fmassa1/.local/bin:/home/fmassa1/bin:/opt/cray/pe/bin]
+        found 'LIBRARIES=' string: ["-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"]
+        considering line: [#$ rm tmp/a_dlink.reg.c]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -E -x c++ -D__CUDACC__ -D__NVCC__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: [cudafe++ --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed  --m64 --parse_templates --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.cpp" --stub_file_name "CMakeCUDACompilerId.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" "tmp/CMakeCUDACompilerId.cpp4.ii" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" -o "tmp/CMakeCUDACompilerId.cpp1.ii" ]
+        considering line: [cicc --c++17 --gnu_version=120300 --display_error_number --orig_src_file_name "CMakeCUDACompilerId.cu" --orig_src_path_name "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/3.27.7/CompilerIdCUDA/CMakeCUDACompilerId.cu" --allow_managed   -arch compute_52 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "CMakeCUDACompilerId.fatbin.c" -tused --module_id_file_name "tmp/CMakeCUDACompilerId.module_id" --gen_c_file_name "tmp/CMakeCUDACompilerId.cudafe1.c" --stub_file_name "tmp/CMakeCUDACompilerId.cudafe1.stub.c" --gen_device_file_name "tmp/CMakeCUDACompilerId.cudafe1.gpu"  "tmp/CMakeCUDACompilerId.cpp1.ii" -o "tmp/CMakeCUDACompilerId.ptx"]
+        considering line: [ptxas -arch=sm_52 -m64  "tmp/CMakeCUDACompilerId.ptx"  -o "tmp/CMakeCUDACompilerId.sm_52.cubin" ]
+        considering line: [fatbinary --create="tmp/CMakeCUDACompilerId.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " "--image3=kind=elf,sm=52,file=tmp/CMakeCUDACompilerId.sm_52.cubin" "--image3=kind=ptx,sm=52,file=tmp/CMakeCUDACompilerId.ptx" --embedded-fatbin="tmp/CMakeCUDACompilerId.fatbin.c" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH__=520 -D__CUDA_ARCH_LIST__=520 -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"   -m64 "tmp/CMakeCUDACompilerId.cudafe1.cpp" -o "tmp/CMakeCUDACompilerId.o" ]
+        considering line: [nvlink -m64 --arch=sm_52 --register-link-binaries="tmp/a_dlink.reg.c"    "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib" -cpu-arch=X86_64 "tmp/CMakeCUDACompilerId.o"  -lcudadevrt  -o "tmp/a_dlink.sm_52.cubin" --host-ccbin "/opt/cray/pe/craype/2.7.30/bin/CC"]
+          ignoring nvlink line
+        considering line: [fatbinary --create="tmp/a_dlink.fatbin" -64 --cicc-cmdline="-ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 " -link "--image3=kind=elf,sm=52,file=tmp/a_dlink.sm_52.cubin" --embedded-fatbin="tmp/a_dlink.fatbin.c" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -c -x c++ -DFATBINFILE="\\"tmp/a_dlink.fatbin.c\\"" -DREGISTERLINKBINARYFILE="\\"tmp/a_dlink.reg.c\\"" -I. -D__NV_EXTRA_INITIALIZATION= -D__NV_EXTRA_FINALIZATION= -D__CUDA_INCLUDE_COMPILER_INTERNAL_HEADERS__  "-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"    -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=140 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -m64 "/soft/compilers/cudatoolkit/cuda-12.2.2/bin/crt/link.stub" -o "tmp/a_dlink.o" ]
+        considering line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          extracted link line: ["/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+        considering line: []
+        extracted link launcher absolute path: [/opt/cray/pe/craype/2.7.30/bin/CC]
+        found 'INCLUDES=' string: ["-I/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include"  ]
+      
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld "/opt/cray/pe/craype/2.7.30/bin"/CC -D__CUDA_ARCH_LIST__=520 -m64 -Wl,--start-group "tmp/a_dlink.o" "tmp/CMakeCUDACompilerId.o"   "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs" "-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib"  -lcudadevrt  -lcudart_static  -lrt -lpthread  -ldl  -Wl,--end-group -o "a.out" ]
+          arg [cuda-fake-ld] ==> ignore
+          arg [/opt/cray/pe/craype/2.7.30/bin/CC] ==> ignore
+          arg [-D__CUDA_ARCH_LIST__=520] ==> ignore
+          arg [-m64] ==> ignore
+          arg [-Wl,--start-group] ==> ignore
+          arg [tmp/a_dlink.o] ==> ignore
+          arg [tmp/CMakeCUDACompilerId.o] ==> ignore
+          arg [-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs] ==> dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs]
+          arg [-L/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib] ==> dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib]
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Wl,--end-group] ==> ignore
+          arg [-o] ==> ignore
+          arg [a.out] ==> ignore
+        collapse library dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib/stubs] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/lib] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl]
+        implicit objs: []
+        implicit dirs: [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs;/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    checks:
+      - "Detecting CUDA compiler ABI info"
+    directories:
+      source: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V"
+      binary: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V"
+    cmakeVariables:
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_RUNTIME_LIBRARY: "Static"
+    buildResult:
+      variable: "CMAKE_CUDA_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V'
+        
+        Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5d38e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5d38e.dir/build.make CMakeFiles/cmTC_5d38e.dir/build
+        gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V'
+        Building CUDA object CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o
+        /soft/compilers/cudatoolkit/cuda-12.2.2/bin/nvcc -forward-unknown-to-host-compiler -ccbin=/opt/cray/pe/craype/2.7.30/bin/CC   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o
+        Using built-in specs.
+        COLLECT_GCC=g++-12
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -E -quiet -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=140 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.ii -march=znver3 -m64 -dumpdir /tmp/ -dumpbase tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include
+         /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include
+         /opt/cray/pals/1.3.4/include
+         /opt/cray/pe/pmi/6.1.13/include
+         /opt/cray/pe/dsmml/0.2.2/dsmml//include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include
+         /usr/include/c++/12
+         /usr/include/c++/12/x86_64-suse-linux
+         /usr/include/c++/12/backward
+         /usr/lib64/gcc/x86_64-suse-linux/12/include
+         /usr/local/include
+         /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include
+         /usr/include
+        End of search list.
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.'
+        Using built-in specs.
+        COLLECT_GCC=g++-12
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -E -quiet -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ -D __CUDA_ARCH_LIST__=520 -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=140 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.ii -march=znver3 -m64 -dumpdir /tmp/ -dumpbase tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include
+         /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include
+         /opt/cray/pals/1.3.4/include
+         /opt/cray/pe/pmi/6.1.13/include
+         /opt/cray/pe/dsmml/0.2.2/dsmml//include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include
+         /usr/include/c++/12
+         /usr/include/c++/12/x86_64-suse-linux
+         /usr/include/c++/12/backward
+         /usr/lib64/gcc/x86_64-suse-linux/12/include
+         /usr/local/include
+         /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include
+         /usr/include
+        End of search list.
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.'
+        Using built-in specs.
+        COLLECT_GCC=g++-12
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_5d38e.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -quiet -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_003df7cb_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_5d38e.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -march=znver3 -m64 -version -o /tmp/ccuXwXTU.s
+        GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)
+        	compiled by GNU C version 12.3.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"
+          as it is a non-system directory that duplicates a system directory
+        ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"
+          as it is a non-system directory that duplicates a system directory
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include
+         /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include
+         /opt/cray/pals/1.3.4/include
+         /opt/cray/pe/pmi/6.1.13/include
+         /opt/cray/pe/dsmml/0.2.2/dsmml//include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include
+         /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include
+         /usr/include/c++/12
+         /usr/include/c++/12/x86_64-suse-linux
+         /usr/include/c++/12/backward
+         /usr/lib64/gcc/x86_64-suse-linux/12/include
+         /usr/local/include
+         /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include
+         /usr/include
+        End of search list.
+        GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)
+        	compiled by GNU C version 12.3.0, GMP version 6.1.2, MPFR version 4.0.2-p6, MPC version 1.1.0, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 00000000000000000000000000000000
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_5d38e.dir/'
+         /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/as -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include --64 -o CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o /tmp/ccuXwXTU.s
+        GNU assembler version 2.41.0 (x86_64-suse-linux) using BFD version (GNU Binutils; SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.'
+        Linking CUDA executable cmTC_5d38e
+        /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d38e.dir/link.txt --verbose=1
+        /opt/cray/pe/craype/2.7.30/bin/CC  -v CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o -o cmTC_5d38e  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs" -L"/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib"
+        Using built-in specs.
+        COLLECT_GCC=g++-12
+        COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-suse-linux
+        Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c,c++,objc,fortran,obj-c++,ada,go,d --enable-offload-targets=nvptx-none, --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 12.3.0 (SUSE Linux) 
+        COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/
+        LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_5d38e' '-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs' '-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-shared-libgcc' '-dumpdir' 'cmTC_5d38e.'
+         /usr/lib64/gcc/x86_64-suse-linux/12/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWrQNnB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5d38e /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o -L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs -L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib -L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib -L/opt/cray/pals/1.3.4/lib -L/opt/cray/pe/pmi/6.1.13/lib -L/opt/cray/pe/dsmml/0.2.2/dsmml//lib -L/soft/perftools/darshan/darshan-3.4.4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12 -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../.. CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -Bdynamic -rpath=/soft/perftools/darshan/darshan-3.4.4/lib -no-as-needed -ldarshan -lz --as-needed -lpals --no-as-needed --as-needed -lpmi --no-as-needed --as-needed -lpmi2 --no-as-needed --as-needed -lmpi_gnu_123 --no-as-needed --as-needed -ldsmml --no-as-needed --as-needed -lgfortran -lquadmath --no-as-needed --as-needed -lmvec --no-as-needed --as-needed -lm --no-as-needed --as-needed -lpthread --no-as-needed --disable-new-dtags -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/12/crtend.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_5d38e' '-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs' '-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-shared-libgcc' '-dumpdir' 'cmTC_5d38e.'
+        gmake[1]: Leaving directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Parsed CUDA implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include]
+          add: [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+          add: [/opt/cray/pals/1.3.4/include]
+          add: [/opt/cray/pe/pmi/6.1.13/include]
+          add: [/opt/cray/pe/dsmml/0.2.2/dsmml//include]
+          add: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+          add: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+          add: [/usr/include/c++/12]
+          add: [/usr/include/c++/12/x86_64-suse-linux]
+          add: [/usr/include/c++/12/backward]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/include]
+          add: [/usr/local/include]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+          add: [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/include]
+        collapse include dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include] ==> [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        collapse include dir [/opt/cray/pals/1.3.4/include] ==> [/opt/cray/pals/1.3.4/include]
+        collapse include dir [/opt/cray/pe/pmi/6.1.13/include] ==> [/opt/cray/pe/pmi/6.1.13/include]
+        collapse include dir [/opt/cray/pe/dsmml/0.2.2/dsmml//include] ==> [/opt/cray/pe/dsmml/0.2.2/dsmml/include]
+        collapse include dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        collapse include dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        collapse include dir [/usr/include/c++/12] ==> [/usr/include/c++/12]
+        collapse include dir [/usr/include/c++/12/x86_64-suse-linux] ==> [/usr/include/c++/12/x86_64-suse-linux]
+        collapse include dir [/usr/include/c++/12/backward] ==> [/usr/include/c++/12/backward]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/include] ==> [/usr/lib64/gcc/x86_64-suse-linux/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed] ==> [/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        collapse include dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include] ==> [/usr/x86_64-suse-linux/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/include;/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include;/opt/cray/pals/1.3.4/include;/opt/cray/pe/pmi/6.1.13/include;/opt/cray/pe/dsmml/0.2.2/dsmml/include;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include;/usr/include/c++/12;/usr/include/c++/12/x86_64-suse-linux;/usr/include/c++/12/backward;/usr/lib64/gcc/x86_64-suse-linux/12/include;/usr/local/include;/usr/lib64/gcc/x86_64-suse-linux/12/include-fixed;/usr/x86_64-suse-linux/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeTestCUDACompiler.cmake:19 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:67 (enable_language)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    message: |
+      Parsed CUDA implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V']
+        ignore line: []
+        ignore line: [Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5d38e/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_5d38e.dir/build.make CMakeFiles/cmTC_5d38e.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-9f3W4V']
+        ignore line: [Building CUDA object CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o]
+        ignore line: [/soft/compilers/cudatoolkit/cuda-12.2.2/bin/nvcc -forward-unknown-to-host-compiler -ccbin=/opt/cray/pe/craype/2.7.30/bin/CC   -Xcompiler=-v -MD -MT CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o -MF CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o.d -x cu -c /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=g++-12]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -E -quiet -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=140 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.ii -march=znver3 -m64 -dumpdir /tmp/ -dumpbase tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.cu -dumpbase-ext .cu]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include]
+        ignore line: [ /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        ignore line: [ /opt/cray/pals/1.3.4/include]
+        ignore line: [ /opt/cray/pe/pmi/6.1.13/include]
+        ignore line: [ /opt/cray/pe/dsmml/0.2.2/dsmml//include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        ignore line: [ /usr/include/c++/12]
+        ignore line: [ /usr/include/c++/12/x86_64-suse-linux]
+        ignore line: [ /usr/include/c++/12/backward]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/tmpxft_003df7cb_00000000-7_CMakeCUDACompilerABI.cpp1.']
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=g++-12]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -E -quiet -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ -D __CUDA_ARCH_LIST__=520 -D __CUDACC__ -D __NVCC__ -D __CUDACC_VER_MAJOR__=12 -D __CUDACC_VER_MINOR__=2 -D __CUDACC_VER_BUILD__=140 -D __CUDA_API_VER_MAJOR__=12 -D __CUDA_API_VER_MINOR__=2 -D __NVCC_DIAG_PRAGMA_SUPPORT__=1 -include cuda_runtime.h /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CMakeCUDACompilerABI.cu -o /tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.ii -march=znver3 -m64 -dumpdir /tmp/ -dumpbase tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.cu -dumpbase-ext .cu]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include]
+        ignore line: [ /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        ignore line: [ /opt/cray/pals/1.3.4/include]
+        ignore line: [ /opt/cray/pe/pmi/6.1.13/include]
+        ignore line: [ /opt/cray/pe/dsmml/0.2.2/dsmml//include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        ignore line: [ /usr/include/c++/12]
+        ignore line: [ /usr/include/c++/12/x86_64-suse-linux]
+        ignore line: [ /usr/include/c++/12/backward]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH_LIST__=520' '-E' '-D' '__CUDACC__' '-D' '__NVCC__' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-D' '__CUDACC_VER_MAJOR__=12' '-D' '__CUDACC_VER_MINOR__=2' '-D' '__CUDACC_VER_BUILD__=140' '-D' '__CUDA_API_VER_MAJOR__=12' '-D' '__CUDA_API_VER_MINOR__=2' '-D' '__NVCC_DIAG_PRAGMA_SUPPORT__=1' '-include' 'cuda_runtime.h' '-m64' '-o' '/tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.ii' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' '/tmp/tmpxft_003df7cb_00000000-5_CMakeCUDACompilerABI.cpp4.']
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=g++-12]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_5d38e.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/cc1plus -quiet -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include -D_GNU_SOURCE -D __CRAY_X86_MILAN -D __CRAYXT_COMPUTE_LINUX_TARGET -D __TARGET_LINUX__ -D __CUDA_ARCH__=520 -D __CUDA_ARCH_LIST__=520 -D CUDA_DOUBLE_MATH_FUNCTIONS /tmp/tmpxft_003df7cb_00000000-6_CMakeCUDACompilerABI.cudafe1.cpp -quiet -dumpdir CMakeFiles/cmTC_5d38e.dir/ -dumpbase CMakeCUDACompilerABI.cu.cpp -dumpbase-ext .cpp -march=znver3 -m64 -version -o /tmp/ccuXwXTU.s]
+        ignore line: [GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [ignoring duplicate directory "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include"]
+        ignore line: [  as it is a non-system directory that duplicates a system directory]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include]
+        ignore line: [ /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include]
+        ignore line: [ /opt/cray/pals/1.3.4/include]
+        ignore line: [ /opt/cray/pe/pmi/6.1.13/include]
+        ignore line: [ /opt/cray/pe/dsmml/0.2.2/dsmml//include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/include]
+        ignore line: [ /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/include]
+        ignore line: [ /usr/include/c++/12]
+        ignore line: [ /usr/include/c++/12/x86_64-suse-linux]
+        ignore line: [ /usr/include/c++/12/backward]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/include-fixed]
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (SUSE Linux) version 12.3.0 (x86_64-suse-linux)]
+        ignore line: [	compiled by GNU C version 12.3.0  GMP version 6.1.2  MPFR version 4.0.2-p6  MPC version 1.1.0  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 00000000000000000000000000000000]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_5d38e.dir/']
+        ignore line: [ /usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/as -v -I /soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include -I /opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include -I /opt/cray/pals/1.3.4/include -I /opt/cray/pe/pmi/6.1.13/include -I /opt/cray/pe/dsmml/0.2.2/dsmml//include --64 -o CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o /tmp/ccuXwXTU.s]
+        ignore line: [GNU assembler version 2.41.0 (x86_64-suse-linux) using BFD version (GNU Binutils]
+        ignore line: [ SUSE Linux Enterprise 15) 2.41.0.20230908-150100.7.46]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-D' '__CUDA_ARCH__=520' '-D' '__CUDA_ARCH_LIST__=520' '-c' '-D' 'CUDA_DOUBLE_MATH_FUNCTIONS' '-v' '-I' '/soft/compilers/cudatoolkit/cuda-12.2.2/bin/../targets/x86_64-linux/include' '-m64' '-o' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-shared-libgcc' '-dumpdir' 'CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.']
+        ignore line: [Linking CUDA executable cmTC_5d38e]
+        ignore line: [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d38e.dir/link.txt --verbose=1]
+        ignore line: [/opt/cray/pe/craype/2.7.30/bin/CC  -v CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o -o cmTC_5d38e  -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs" -L"/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=g++-12]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-suse-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib64 --libexecdir=/usr/lib64 --enable-languages=c c++ objc fortran obj-c++ ada go d --enable-offload-targets=nvptx-none  --enable-offload-defaulted --without-cuda-driver --enable-checking=release --disable-werror --with-gxx-include-dir=/usr/include/c++/12 --enable-ssp --disable-libssp --disable-libvtv --enable-cet=auto --disable-libcc1 --disable-plugin --with-bugurl=https://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --with-slibdir=/lib64 --with-system-zlib --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-libphobos --enable-version-specific-runtime-libs --with-gcc-major-version-only --enable-linker-build-id --enable-linux-futex --enable-gnu-indirect-function --program-suffix=-12 --without-system-libunwind --enable-multilib --with-arch-32=x86-64 --with-tune=generic --enable-link-serialization --build=x86_64-suse-linux --host=x86_64-suse-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.3.0 (SUSE Linux) ]
+        ignore line: [COMPILER_PATH=/soft/xalt/3.0.2-202408282050/bin/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib64/gcc/x86_64-suse-linux/12/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib/:/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib/:/usr/lib64/gcc/x86_64-suse-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=znver3' '-D' '__CRAY_X86_MILAN' '-D' '__CRAYXT_COMPUTE_LINUX_TARGET' '-D' '__TARGET_LINUX__' '-v' '-o' 'cmTC_5d38e' '-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs' '-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib' '-I' '/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/include' '-I' '/opt/cray/pals/1.3.4/include' '-I' '/opt/cray/pe/pmi/6.1.13/include' '-I' '/opt/cray/pe/dsmml/0.2.2/dsmml//include' '-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib' '-L/opt/cray/pals/1.3.4/lib' '-L/opt/cray/pe/pmi/6.1.13/lib' '-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib' '-L/soft/perftools/darshan/darshan-3.4.4/lib' '-shared-libgcc' '-dumpdir' 'cmTC_5d38e.']
+        link line: [ /usr/lib64/gcc/x86_64-suse-linux/12/collect2 -plugin /usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so -plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWrQNnB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_5d38e /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o /usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o -L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs -L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib -L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib -L/opt/cray/pals/1.3.4/lib -L/opt/cray/pe/pmi/6.1.13/lib -L/opt/cray/pe/dsmml/0.2.2/dsmml//lib -L/soft/perftools/darshan/darshan-3.4.4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12 -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib -L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib -L/usr/lib64/gcc/x86_64-suse-linux/12/../../.. CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o -lcudadevrt -lcudart_static -lrt -lpthread -ldl -Bdynamic -rpath=/soft/perftools/darshan/darshan-3.4.4/lib -no-as-needed -ldarshan -lz --as-needed -lpals --no-as-needed --as-needed -lpmi --no-as-needed --as-needed -lpmi2 --no-as-needed --as-needed -lmpi_gnu_123 --no-as-needed --as-needed -ldsmml --no-as-needed --as-needed -lgfortran -lquadmath --no-as-needed --as-needed -lmvec --no-as-needed --as-needed -lm --no-as-needed --as-needed -lpthread --no-as-needed --disable-new-dtags -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib64/gcc/x86_64-suse-linux/12/crtend.o /usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib64/gcc/x86_64-suse-linux/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccWrQNnB.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_5d38e] ==> ignore
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o]
+          arg [-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs] ==> dir [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs]
+          arg [-L/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib] ==> dir [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib]
+          arg [-L/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib] ==> dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib]
+          arg [-L/opt/cray/pals/1.3.4/lib] ==> dir [/opt/cray/pals/1.3.4/lib]
+          arg [-L/opt/cray/pe/pmi/6.1.13/lib] ==> dir [/opt/cray/pe/pmi/6.1.13/lib]
+          arg [-L/opt/cray/pe/dsmml/0.2.2/dsmml//lib] ==> dir [/opt/cray/pe/dsmml/0.2.2/dsmml//lib]
+          arg [-L/soft/perftools/darshan/darshan-3.4.4/lib] ==> dir [/soft/perftools/darshan/darshan-3.4.4/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib] ==> dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib]
+          arg [-L/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib] ==> dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib]
+          arg [-L/usr/lib64/gcc/x86_64-suse-linux/12/../../..] ==> dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../..]
+          arg [CMakeFiles/cmTC_5d38e.dir/CMakeCUDACompilerABI.cu.o] ==> ignore
+          arg [-lcudadevrt] ==> lib [cudadevrt]
+          arg [-lcudart_static] ==> lib [cudart_static]
+          arg [-lrt] ==> lib [rt]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ldl] ==> lib [dl]
+          arg [-Bdynamic] ==> search dynamic
+          arg [-rpath=/soft/perftools/darshan/darshan-3.4.4/lib] ==> ignore
+          arg [-no-as-needed] ==> ignore
+          arg [-ldarshan] ==> lib [darshan]
+          arg [-lz] ==> lib [z]
+          arg [--as-needed] ==> ignore
+          arg [-lpals] ==> lib [pals]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpmi] ==> lib [pmi]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpmi2] ==> lib [pmi2]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lmpi_gnu_123] ==> lib [mpi_gnu_123]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-ldsmml] ==> lib [dsmml]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgfortran] ==> lib [gfortran]
+          arg [-lquadmath] ==> lib [quadmath]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lmvec] ==> lib [mvec]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lm] ==> lib [m]
+          arg [--no-as-needed] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lpthread] ==> lib [pthread]
+          arg [--no-as-needed] ==> ignore
+          arg [--disable-new-dtags] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o]
+          arg [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o] ==> obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs]
+        collapse library dir [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib] ==> [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib]
+        collapse library dir [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib] ==> [/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib]
+        collapse library dir [/opt/cray/pals/1.3.4/lib] ==> [/opt/cray/pals/1.3.4/lib]
+        collapse library dir [/opt/cray/pe/pmi/6.1.13/lib] ==> [/opt/cray/pe/pmi/6.1.13/lib]
+        collapse library dir [/opt/cray/pe/dsmml/0.2.2/dsmml//lib] ==> [/opt/cray/pe/dsmml/0.2.2/dsmml/lib]
+        collapse library dir [/soft/perftools/darshan/darshan-3.4.4/lib] ==> [/soft/perftools/darshan/darshan-3.4.4/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12] ==> [/usr/lib64/gcc/x86_64-suse-linux/12]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib]
+        collapse library dir [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib] ==> [/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../../../x86_64-suse-linux/lib] ==> [/usr/x86_64-suse-linux/lib]
+        collapse library dir [/usr/lib64/gcc/x86_64-suse-linux/12/../../..] ==> [/usr/lib64]
+        implicit libs: [cudadevrt;cudart_static;rt;pthread;dl;darshan;z;pals;pmi;pmi2;mpi_gnu_123;dsmml;gfortran;quadmath;mvec;m;pthread;stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib64/gcc/x86_64-suse-linux/12/crtbegin.o;/usr/lib64/gcc/x86_64-suse-linux/12/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib/stubs;/soft/compilers/cudatoolkit/cuda-12.2.2/targets/x86_64-linux/lib;/opt/cray/pe/mpich/8.1.28/ofi/gnu/12.3/lib;/opt/cray/pals/1.3.4/lib;/opt/cray/pe/pmi/6.1.13/lib;/opt/cray/pe/dsmml/0.2.2/dsmml/lib;/soft/perftools/darshan/darshan-3.4.4/lib;/usr/lib64/gcc/x86_64-suse-linux/12;/usr/lib64;/lib64;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/curl-8.4.0-2ztev25qvydhabvu4nbkrtn4opcvw5nl/lib;/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/nghttp2-1.57.0-ciat5hufbwpozo6vmqgxanucn2zwu6z4/lib;/usr/x86_64-suse-linux/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/share/cmake-3.27/Modules/FindCUDA.cmake:1071 (find_package)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/thirdparty/BLTSetupCUDA.cmake:101 (find_package)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/BLTSetupTargets.cmake:97 (include)"
+      - "/soft/visualization/ascent/develop/2024-05-03-8baa78c/ascent-develop/lib/cmake/ascent/AscentConfig.cmake:156 (include)"
+      - "CMakeLists.txt:6 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-WZiQ0T"
+      binary: "/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-WZiQ0T"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fPIC"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-WZiQ0T'
+        
+        Run Build Command(s): /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c7252/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c7252.dir/build.make CMakeFiles/cmTC_c7252.dir/build
+        gmake[1]: Entering directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-WZiQ0T'
+        Building C object CMakeFiles/cmTC_c7252.dir/src.c.o
+        /opt/cray/pe/craype/2.7.30/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_c7252.dir/src.c.o -c /home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-WZiQ0T/src.c
+        Linking C executable cmTC_c7252
+        /soft/spack/base/0.7.1/install/linux-sles15-x86_64/gcc-12.3.0/cmake-3.27.7-a435jtzvweeos2es6enirbxdjdqhqgdp/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7252.dir/link.txt --verbose=1
+        /opt/cray/pe/craype/2.7.30/bin/cc -fPIC  -dynamic CMakeFiles/cmTC_c7252.dir/src.c.o -o cmTC_c7252 
+        gmake[1]: Leaving directory '/home/fmassa1/lbm-cfd-ascent/build/CMakeFiles/CMakeScratch/TryCompile-WZiQ0T'
+        
+      exitCode: 0
+...
