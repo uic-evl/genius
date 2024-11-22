@@ -33,3 +33,8 @@
 *.xcuserstate
 
 login.swift
+ServerGenius/LBM-images/
+ServerGenius/outputs/
+ServerGenius/myenv/
+ServerGenius/__pycache__/
+
