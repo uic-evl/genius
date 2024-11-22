@@ -119,7 +119,7 @@ class VideoDownloader: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     
     func downloadVideo(simulation: FluidSimulation) {
-        var urlComponents = URLComponents(string: "http://" + Login().getIP() + ":5000/video")
+        var urlComponents = URLComponents(string: "http://" + Login().getIP() + ":5000/lbm-sim")
         urlComponents?.queryItems = [
             URLQueryItem(name: "density", value: simulation.density),
             URLQueryItem(name: "speed", value: simulation.speed),

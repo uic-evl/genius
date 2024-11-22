@@ -73,7 +73,7 @@ func sendPostRequest(command: [String], directory: String, completion: @escaping
 
 
 func codeRequest(command: String, completion: @escaping (String) -> Void ) {
-    guard let url = URL(string: "http://" + Login().getIP() + ":5000/video") else {  //127.0.0.1:5000
+    guard let url = URL(string: "http://" + Login().getIP() + ":5000/lbm-sim") else {  //127.0.0.1:5000
         print("Invalid URL")
         completion("error")
         return
