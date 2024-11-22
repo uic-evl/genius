@@ -89,7 +89,7 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack(spacing: 30) {
-//                        Button("Add Event") {
+//                        Button("run sim") {
 //                            addEventToToday()
 //                        }
 //                        .buttonStyle(.borderedProminent)
@@ -100,6 +100,17 @@ struct ContentView: View {
 //                                }
 //                            }
 //                        }
+                        Button("run sim 1") {
+                            DispatchQueue.main.async {
+                                self.openWindow(id: "sim", value: "1000, 1.0, 2.5, 1.3806, 8.0, 0.04")
+                            }
+                        }
+                        Button("run sim 2") {
+                            DispatchQueue.main.async {
+                                self.openWindow(id: "sim", value: "500, 1.0, 2.5, 1.3806, 8.0, 0.04")
+                            }
+                        }
+                        
                         Button(action: {
                             updatingTextHolder.isRecording.toggle()
                             if updatingTextHolder.isRecording {
