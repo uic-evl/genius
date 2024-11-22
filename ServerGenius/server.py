@@ -5,7 +5,7 @@ from ssh import *
 from code_generator import *
 from run_script import *
 
-IP_ADDRESS = "10.16.221.44"
+IP_ADDRESS = ""
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
