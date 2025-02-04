@@ -155,11 +155,11 @@ struct ContentView: View {
             .frame(minWidth: 600, idealWidth: 800, maxWidth: .infinity, minHeight: 400, idealHeight: 600, maxHeight: .infinity)
         }
         .background(Color(.systemGray6))
-        .onAppear {
-            Task {
-                await openImmersiveSpace(id: "ImmersiveSpace")
-            }
-        }
+//        .onAppear {
+//            Task {
+//                await openImmersiveSpace(id: "ImmersiveSpace")
+//            }
+//        }
     }
     
     

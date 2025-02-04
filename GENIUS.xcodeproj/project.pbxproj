@@ -89,7 +89,6 @@
 		AC81CAC72BED259800933492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC81CACC2BED259800933492 /* GENIUSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GENIUSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC81CAD02BED259800933492 /* GENIUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GENIUSTests.swift; sourceTree = "<group>"; };
-		AC953E912C48253C002D8190 /* SpiderMan.usda */ = {isa = PBXFileReference; lastKnownFileType = text; name = SpiderMan.usda; path = Packages/RealityKitContent/Sources/RealityKitContent/RealityKitContent.rkassets/SpiderMan.usda; sourceTree = "<group>"; };
 		AC953E972C4EB29D002D8190 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		AC974F742CB71A010022EC30 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		ACDC9BD12BF7F39F008C5B21 /* RecorderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderModel.swift; sourceTree = "<group>"; };
@@ -181,7 +180,6 @@
 		AC81CAAC2BED259700933492 = {
 			isa = PBXGroup;
 			children = (
-				AC953E912C48253C002D8190 /* SpiderMan.usda */,
 				AC81CAB72BED259700933492 /* GENIUS */,
 				AC81CAB82BED259700933492 /* Packages */,
 				AC81CACF2BED259800933492 /* GENIUSTests */,
