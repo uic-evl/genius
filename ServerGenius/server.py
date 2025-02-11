@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from ssh import *
 from code_generator import *
 from run_script import *
+from polaris_functions import *
 
 IP_ADDRESS = ""
 
@@ -14,6 +15,16 @@ auth = HTTPBasicAuth()
 @auth.login_required
 def index():
     return '<h1>Hello, World!</h1>'
+
+
+@app.route('/queue_status', methods=['POST'])
+def queue():
+    output = queue_status_update()
+    response = {
+            'output': output,
+        }
+    print(response)
+    return jsonify(response)
 
 
 #Handles requests for the simulations
