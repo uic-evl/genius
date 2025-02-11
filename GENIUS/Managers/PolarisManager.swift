@@ -124,11 +124,72 @@ func codeRequest(command: String, completion: @escaping (String) -> Void ) {
                 print("Directory: \(directory)")
                 completion("true")
             } else {
-                completion("error2")
+                completion("not JSON")
             }
         } catch {
             print("Failed to decode JSON: \(error)")
             completion("error")
+        }
+    }
+    
+    task.resume()
+}
+
+func queueRequest(completion: @escaping (String) -> Void ) {
+    guard let url = URL(string: "http://" + Login().getIP() + ":5000/queue_status") else {  //127.0.0.1:5000
+        print("Invalid URL")
+        completion("error")
+        return
+    }
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    
+    let parameters: [String: Any] = [
+        "user": Login().getUser(),
+        "password": Login().getPass(),
+    ]
+    
+    do {
+        request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+    } catch {
+        print("Failed to serialize JSON: \(error)")
+        completion("error")
+        return
+    }
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        if let error = error {
+            print("Error: \(error)")
+            completion("error")
+            return
+        }
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              (200...299).contains(httpResponse.statusCode) else {
+            print("Invalid response")
+            completion("error")
+            return
+        }
+        
+        guard let data = data else {
+            print("No data")
+            completion("error")
+            return
+        }
+        
+        do {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+               let output = json["output"] as? [String]{
+                print("JSON Response: \(json)")
+                completion(output[0])
+            } else {
+                completion("error getting queue because the response was not a json")
+            }
+        } catch {
+            print("Failed to decode JSON: \(error)")
+            completion("error getting queue")
         }
     }
     

@@ -67,7 +67,7 @@ class Argo : ObservableObject {
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             parameters = [
                 "inputs": """
-              <|begin_of_text|> <|start_header_id|>system<|end_header_id|> You are a large language model with the name Genius. You are a personal assistant specifically tailored for scientists engaged in experimentation and research. You offer functionalities like opening 3D models, recording meetings, running simulations, answering questions, and displaying proteins. Be a helpful assistant with a cheerful tone. <| eot_id|> <|start_header_id|>user<|end_header_id|> \(fullPrompt) <|eot_id|> <|start_header_id|>assistant<|end_header_id|>
+              <|begin_of_text|> <|start_header_id|>system<|end_header_id|> You are a large language model with the name Genius. You are a personal assistant specifically tailored for scientists engaged in experimentation and research. You offer functionalities like opening 3D models, recording meetings, running simulations, answering questions, checking a queue, and displaying proteins. Be a helpful assistant with a cheerful tone. <| eot_id|> <|start_header_id|>user<|end_header_id|> \(fullPrompt) <|eot_id|> <|start_header_id|>assistant<|end_header_id|>
               """,
                 "parameters": [
                     "max_new_tokens": 300
@@ -149,7 +149,7 @@ class Argo : ObservableObject {
             return
         }
         print("recording ", recording)
-        let allModes = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
+        let allModes = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model, or simulation. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something. Choose simulation if the user wants to run a simulation of something. Choose queue if the user has questions about the queue. Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen.  Your response must be one word. The user said: \(recording)."
         
 //        let noSim = "You will decide what type of action that needs to be taken based on user input. Respond with one of the following options with no punctuation or spaces: meeting, prompt, model. Choose meeting if based on the user input, the user wants to start recording a meeting, however choose schedule if the user just wants to schedule one. Choose check_schedule if the user is asking if there is an up coming meeting or wants to check their schedule. Choose prompt if the user wants information about something. Choose model if the user wants to see a representation of something.Choose protein if the user wants to visualize protein interactions. Choose clear if the user wants to clear the screen. Your response must be one word. The user said: \(recording)."
         let prompt = allModes
@@ -179,6 +179,9 @@ class Argo : ObservableObject {
             }
             else if mode.contains("schedule") {
                 self.handleSchedule()
+            }
+            else if mode.contains("queue") {
+                self.handleQueue()
             }
             
             else {
@@ -480,6 +483,35 @@ class Argo : ObservableObject {
                     
             }
         }
+    }
+    
+    func handleQueue() {
+        updatingTextHolder.mode = "Loading response..."
+        let question = updatingTextHolder.recongnizedText
+        //let question = "give me a status update job 3205268 in the queue"
+        //let question = "give me a job id of any job thats running right now"
+        queueRequest { polarisResponse in
+            DispatchQueue.main.async {
+                print("Polaris response:", polarisResponse, "response done")
+                }
+                do {
+                    Task {
+                        // call Argo API to get response to prompt
+                        let response = try await self.getResponse(prompt: "Here is the queue I got from using qstat. My username is fmassa. If given a job id thats just a number append '.polaris-pbs-01' after the number before looking for the job. Please give me a short conversation answering this question '" + question + "': " + polarisResponse, model: self.curModel)
+                        print("response:", response, "response done")
+                        
+                        // call text to speech function with the response from LLM
+                        self.speaker.speak(text: response)
+                        
+                        // add converation entry
+                        self.conversationManager.addEntry(prompt: question, response: response)
+                        
+                        // update UI
+                        self.updatingTextHolder.mode = " "
+                        self.updatingTextHolder.responseText = response
+                    }
+                }
+            }
     }
     
     // Clear all extra open windows

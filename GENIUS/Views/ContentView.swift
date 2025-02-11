@@ -110,6 +110,9 @@ struct ContentView: View {
                                 self.openWindow(id: "sim", value: "500, 1.0, 2.5, 1.3806, 8.0, 0.04")
                             }
                         }
+                        Button("test queue") {
+                            argo.handleQueue()
+                        }
                         
                         Button(action: {
                             updatingTextHolder.isRecording.toggle()
